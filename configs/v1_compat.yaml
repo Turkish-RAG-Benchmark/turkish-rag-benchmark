@@ -1,0 +1,57 @@
+# v1'deki 8 konfigürasyonun, v1'in fiilen yaptığı tercihlerle yeniden kurulumu.
+# Amaç: yeni paketin v1 skorlarını yakın biçimde üretebildiğini doğrulamak (sanity check).
+#   - exact metriği: alt dize (substring) eşleşmesi
+#   - kopya dokümanlar birleştirilmez
+#   - embedding modellerine önek (query:/passage:) verilmez
+#   - BM25: İngilizce stemmer + İngilizce stopword (llama-index varsayılanı)
+#   - hybrid: "simple" füzyon (ham skorların maksimumu)
+name: v1_compat
+
+data:
+  docs_dir: data/processed/stage2_cleaned
+  qa_dir: data/benchmark
+
+eval:
+  k_values: [1, 3, 5, 10]
+  exact_mode: v1_substring
+  exact_threshold: 0.7
+  merge_duplicate_docs: false
+  bootstrap: 1000
+  seed: 42
+
+runtime:
+  device: null        # null = varsa CUDA, yoksa CPU
+  batch_size: 16
+  cache_dir: .cache
+
+systems:
+  - name: RAG-1 (bge-m3)
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: BAAI/bge-m3, prefixes: none}
+  - name: RAG-2 (multilingual-e5-large)
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
+  - name: RAG-3 (paraphrase-multilingual-mpnet-base-v2)
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: sentence-transformers/paraphrase-multilingual-mpnet-base-v2, prefixes: none}
+  - name: RAG-4 (256/50)
+    chunking: {type: sentence, size: 256, overlap: 50}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
+  - name: RAG-5 (1024/200)
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
+  - name: RAG-6 (Header Based)
+    chunking: {type: markdown}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
+  - name: RAG-7 (BM25 Only)
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: bm25, tokenizer: v1_en}
+  - name: RAG-8 (Hybrid simple)
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever:
+      type: hybrid
+      mode: simple
+      candidate_k: 10
+      components:
+        - {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
+        - {type: bm25, tokenizer: v1_en}

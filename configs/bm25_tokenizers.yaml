@@ -1,0 +1,36 @@
+# BM25 tokenizasyon karşılaştırması (H2). GPU gerektirmez.
+# v1'deki İngilizce stemmer'a karşı Türkçe tokenizasyon, farklı chunk boyutlarında.
+name: bm25_tokenizers
+
+data:
+  docs_dir: data/processed/stage2_cleaned
+  qa_dir: data/benchmark
+
+eval:
+  k_values: [1, 3, 5, 10]
+  exact_mode: token
+  merge_duplicate_docs: true
+  bootstrap: 1000
+  seed: 42
+
+systems:
+  - {name: "BM25 v1_en / 1024", chunking: {type: sentence, size: 1024, overlap: 200}, retriever: {type: bm25, tokenizer: v1_en}}
+  - {name: "BM25 tr_plain / 1024", chunking: {type: sentence, size: 1024, overlap: 200}, retriever: {type: bm25, tokenizer: tr_plain}}
+  - {name: "BM25 tr_snowball / 1024", chunking: {type: sentence, size: 1024, overlap: 200}, retriever: {type: bm25, tokenizer: tr_snowball}}
+  - {name: "BM25 v1_en / 512", chunking: {type: sentence, size: 512, overlap: 128}, retriever: {type: bm25, tokenizer: v1_en}}
+  - {name: "BM25 tr_snowball / 512", chunking: {type: sentence, size: 512, overlap: 128}, retriever: {type: bm25, tokenizer: tr_snowball}}
+  - {name: "BM25 v1_en / 256", chunking: {type: sentence, size: 256, overlap: 50}, retriever: {type: bm25, tokenizer: v1_en}}
+  - {name: "BM25 tr_snowball / 256", chunking: {type: sentence, size: 256, overlap: 50}, retriever: {type: bm25, tokenizer: tr_snowball}}
+  - {name: "BM25 v1_en / markdown", chunking: {type: markdown}, retriever: {type: bm25, tokenizer: v1_en}}
+  - {name: "BM25 tr_snowball / markdown", chunking: {type: markdown}, retriever: {type: bm25, tokenizer: tr_snowball}}
+  # Aynı sıralama, v1 metrik ayarlarıyla (ablasyon için)
+  - name: "BM25 v1_en / 1024 [v1 metrik]"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: bm25, tokenizer: v1_en}
+    eval: {exact_mode: v1_substring, merge_duplicate_docs: false}
+
+comparisons:
+  - ["BM25 tr_snowball / 1024", "BM25 v1_en / 1024"]
+  - ["BM25 tr_plain / 1024", "BM25 v1_en / 1024"]
+  - ["BM25 tr_snowball / 1024", "BM25 tr_plain / 1024"]
+comparison_k: 5

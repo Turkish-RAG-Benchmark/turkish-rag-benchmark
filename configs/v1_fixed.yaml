@@ -1,0 +1,94 @@
+# v1'in 8 konfigürasyonu, düzeltmeler uygulanmış haliyle (H1–H6):
+#   - exact metriği: kelime (token) bazlı eşleşme
+#   - kopya dokümanlar (FM04=FM22, FM05=FM21, m20=m44) aynı doküman sayılır
+#   - modele özgü önekler otomatik (e5: "query: " / "passage: ")
+#   - BM25: Türkçe küçük harf + Türkçe stopword + Türkçe Snowball stemmer
+#   - hybrid: Reciprocal Rank Fusion
+# Sistem isimleri v1_compat.yaml ile aynı "RAG-n" önekini taşır (scripts/compare_runs.py eşleştirmesi için).
+name: v1_fixed
+
+data:
+  docs_dir: data/processed/stage2_cleaned
+  qa_dir: data/benchmark
+
+eval:
+  k_values: [1, 3, 5, 10]
+  exact_mode: token
+  exact_threshold: 0.7
+  merge_duplicate_docs: true
+  bootstrap: 1000
+  seed: 42
+
+runtime:
+  device: null        # null = varsa CUDA, yoksa CPU
+  batch_size: 16
+  cache_dir: .cache
+  dtype: null         # GPU'da "float16" bellek ve hız kazandırır
+
+systems:
+  - name: RAG-1 (bge-m3)
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: BAAI/bge-m3}
+  - name: RAG-2 (multilingual-e5-large)
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large}
+  - name: RAG-3 (paraphrase-multilingual-mpnet-base-v2)
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: sentence-transformers/paraphrase-multilingual-mpnet-base-v2}
+  - name: RAG-4 (256/50)
+    chunking: {type: sentence, size: 256, overlap: 50}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large}
+  - name: RAG-5 (1024/200)
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large}
+  - name: RAG-6 (Header Based)
+    chunking: {type: markdown}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large}
+  - name: RAG-7 (BM25 Only)
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: bm25, tokenizer: tr_snowball}
+  - name: RAG-8 (Hybrid RRF)
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever:
+      type: hybrid
+      mode: rrf
+      candidate_k: 50
+      components:
+        - {type: dense, model: intfloat/multilingual-e5-large}
+        - {type: bm25, tokenizer: tr_snowball}
+
+  # --- Ablasyon: tek bir düzeltmenin etkisi ---
+  - name: "ABL e5 önek yok (H3)"
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
+  - name: "ABL hybrid simple (H1)"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever:
+      type: hybrid
+      mode: simple
+      candidate_k: 10
+      components:
+        - {type: dense, model: intfloat/multilingual-e5-large}
+        - {type: bm25, tokenizer: tr_snowball}
+  - name: "ABL hybrid relative_score"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever:
+      type: hybrid
+      mode: relative_score
+      candidate_k: 50
+      components:
+        - {type: dense, model: intfloat/multilingual-e5-large}
+        - {type: bm25, tokenizer: tr_snowball}
+
+  # --- Yeni model (8 GB VRAM'e sığar) ---
+  - name: "NEW Qwen3-Embedding-0.6B"
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: Qwen/Qwen3-Embedding-0.6B}
+
+comparisons:
+  - ["RAG-8 (Hybrid RRF)", "RAG-7 (BM25 Only)"]
+  - ["RAG-8 (Hybrid RRF)", "RAG-5 (1024/200)"]
+  - ["RAG-8 (Hybrid RRF)", "ABL hybrid simple (H1)"]
+  - ["RAG-2 (multilingual-e5-large)", "ABL e5 önek yok (H3)"]
+  - ["RAG-2 (multilingual-e5-large)", "RAG-1 (bge-m3)"]
+comparison_k: 5

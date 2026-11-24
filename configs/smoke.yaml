@@ -1,0 +1,41 @@
+# Kod yollarının hızlı kontrolü (küçük model, CPU'da birkaç dakika):
+#   python -m trrag.evaluate --config configs/smoke.yaml --limit 100
+name: smoke
+
+data:
+  docs_dir: data/processed/stage2_cleaned
+  qa_dir: data/benchmark
+
+eval:
+  bootstrap: 200
+
+runtime:
+  cache_dir: .cache
+
+systems:
+  - name: dense MiniLM
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: dense, model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2}
+  - name: bm25 tr
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: bm25}
+  - name: hybrid rrf
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever:
+      type: hybrid
+      mode: rrf
+      candidate_k: 50
+      components:
+        - {type: dense, model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2}
+        - {type: bm25}
+  - name: hybrid simple
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever:
+      type: hybrid
+      mode: simple
+      components:
+        - {type: dense, model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2}
+        - {type: bm25}
+
+comparisons:
+  - ["hybrid rrf", "bm25 tr"]

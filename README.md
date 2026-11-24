@@ -64,16 +64,34 @@ turkish-rag-benchmark/
 │   └── benchmark/              # Sentetik Soru-Cevap test seti (JSON)
 ├── notebooks/                  # Deneysel Jupyter Notebook dosyaları
 │   ├── extract_text.ipynb      # Docling ile PDF-to-MD dönüşüm betiği
-│   └── benchmarks.ipynb        # LlamaIndex ile RAG testleri, Exact Match ve analizleri
+│   └── rag-benchmarks.ipynb    # LlamaIndex ile RAG testleri, Exact Match ve analizleri
 ├── results/                    # Değerlendirme Çıktıları
 │   ├── figures/                # Performans ve gelişim grafikleri (.png)
 │   │   ├── overall_performance.png
 │   │   ├── progression_by_groups.png
 │   │   ├── doc_vs_exact_hitrate.png
-│   │   └── top_k_curve.png
+│   │   └── top_k_curves_comprehensive.png
 │   └── tables/                 # Sistem bazlı metrik sonuçları (.csv)
+├── src/trrag/                  # v2 değerlendirme paketi (notebook'tan bağımsız, yeniden üretilebilir)
+├── configs/                    # Deney tanımları (YAML)
+├── scripts/                    # Koşuları karşılaştırma vb. yardımcı betikler
+├── tests/                      # Metrik ve retriever birim testleri
 └── README.md                   # Proje ana tanıtım dökümanı (Bu dosya)
 ```
+
+### ▶️ Kurulum ve Çalıştırma (v2 değerlendirme paketi)
+
+```bash
+python -m venv .venv
+.venv/Scripts/activate            # Linux/macOS: source .venv/bin/activate
+pip install torch --index-url https://download.pytorch.org/whl/cu126   # GPU için (CPU'da bu adımı atlayın)
+pip install -e ".[dev]"
+pytest                             # birim testleri
+python -m trrag.evaluate --config configs/v1_fixed.yaml               # tüm deneyler
+python -m trrag.evaluate --config configs/smoke.yaml --limit 100      # hızlı deneme
+```
+
+Her koşu `results/runs/<config>/<zaman>/` altına `summary.csv` (güven aralıklı, alt kümelere göre), `summary_wide.csv`, soru bazında sıralar (`per_query.csv`), anlamlılık testleri (`comparisons.csv`) ve ortam/ayar bilgisi (`run.json`) yazar.
 
 ---
 
@@ -108,7 +126,7 @@ Modeller hem **Doküman Düzeyinde (Document-Level)** hem de **Tam Eşleşme/Par
 1. **Doküman Düzeyi (Doc_HitRate & Doc_MRR):** Sorgunun türetildiği doğru makalenin (dokümanın) geri getirilen parçalar arasında yer alıp almadığını ve kaçıncı sırada olduğunu ölçer.
 2. **Tam Eşleşme Düzeyi (Exact_HitRate & Exact_MRR):** Sorguya ait asıl cevap metninin (ground truth), geri getirilen parçanın (chunk) içinde yer alıp almadığını ölçer. Doğruluk ölçütü olarak, normalize edilmiş cevap metnindeki kelimelerin en az **%70'inin** ilgili parça içinde geçmesi (overlap ratio >= 0.70) şartı aranmıştır.
 
-Tüm detaylı sonuçlar ve farklı K değerleri (K=1, 3, 5, 10) [rag_evaluation_results.csv](file:///c:/Users/yekbu/Desktop/turkish-rag-benchmark/results/tables/rag_evaluation_results.csv) dosyasında saklanmaktadır. Aşağıdaki tabloda RAG sistemleri için en kritik olan **K=5** sonuçları özetlenmiştir.
+Tüm detaylı sonuçlar ve farklı K değerleri (K=1, 3, 5, 10) [rag_evaluation_results.csv](results/tables/rag_evaluation_results.csv) dosyasında saklanmaktadır. Aşağıdaki tabloda RAG sistemleri için en kritik olan **K=5** sonuçları özetlenmiştir.
 
 ### 📊 Performans Tablosu (K=5 Özet)
 
@@ -226,4 +244,4 @@ Bu benchmark çalışmasından elde edilen somut çıkarımlar ve Türkçe RAG p
     *   RAG-8 (Hybrid) ve RAG-7 (BM25 Only) arasında başarım farkının olmaması, bu veri setinde performansı sırtlayan ana unsurun BM25 olduğunu ve Türkçe akademik arama motorlarında leksikal tabanlı bir retriever'ın olmazsa olmaz olduğunu göstermektedir.
 
 4.  **GPU Optimizasyonu:**
-    *   Değerlendirme notebook'unda (`benchmarks.ipynb`), sorguların GPU üzerinde **toplu olarak vektörleştirilmesini (Batch embedding)** sağlayan özel bir asenkron değerlendirici kurgulanmıştır. Bu yaklaşım, GPU bellek taşmalarını (OOM) önlemiş ve değerlendirme sürelerini hızlandırmıştır.
+    *   Değerlendirme notebook'unda (`rag-benchmarks.ipynb`), sorguların GPU üzerinde **toplu olarak vektörleştirilmesini (Batch embedding)** sağlayan özel bir asenkron değerlendirici kurgulanmıştır. Bu yaklaşım, GPU bellek taşmalarını (OOM) önlemiş ve değerlendirme sürelerini hızlandırmıştır.
