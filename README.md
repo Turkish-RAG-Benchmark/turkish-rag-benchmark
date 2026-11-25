@@ -245,3 +245,11 @@ Bu benchmark çalışmasından elde edilen somut çıkarımlar ve Türkçe RAG p
 
 4.  **GPU Optimizasyonu:**
     *   Değerlendirme notebook'unda (`rag-benchmarks.ipynb`), sorguların GPU üzerinde **toplu olarak vektörleştirilmesini (Batch embedding)** sağlayan özel bir asenkron değerlendirici kurgulanmıştır. Bu yaklaşım, GPU bellek taşmalarını (OOM) önlemiş ve değerlendirme sürelerini hızlandırmıştır.
+
+---
+
+## 📄 Lisans
+
+Bu depodaki **kaynak kod** (`src/`, `scripts/`, `tests/`, `configs/`, `notebooks/`) [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+
+`data/raw/` altındaki makale PDF'leri ve bunlardan türetilen metinlerin hakları ilgili **yazarlara ve yayıncılara** aittir; MIT lisansı bu içerikleri kapsamaz. Veri setinin lisans durumu bir sonraki sürümde makale bazında belgelenecektir.

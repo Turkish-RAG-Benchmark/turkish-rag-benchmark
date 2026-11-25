@@ -44,3 +44,16 @@ def test_chunk_key_includes_tokenizer():
 
     assert chunk_key({"type": "sentence", "size": 512, "overlap": 128}) == "sentence-512-128"
     assert chunk_key({"type": "sentence", "size": 500, "overlap": 100, "tokenizer": "a/b"}) == "sentence-500-100-a_b"
+
+
+def test_v1_metadata_mode_prefixes_index_text_only():
+    from trrag.chunking import chunk_corpus
+
+    docs = {"t01": "Birinci cümle burada. " * 200}
+    spec = {"type": "sentence", "size": 128, "overlap": 0}
+    plain = chunk_corpus(docs, spec)
+    v1 = chunk_corpus(docs, {**spec, "v1_file_path_prefix": "/kaggle/x"}, {"t01": "tip_cleaned/t01.md"})
+    assert plain[0].retrieval_text == plain[0].text
+    assert v1[0].retrieval_text.startswith("file_path: /kaggle/x/tip_cleaned/t01.md")
+    assert not v1[0].text.startswith("file_path")  # exact metriği meta veriyi görmez
+    assert len(v1) > len(plain)  # meta veri parça boyutundan yer yer

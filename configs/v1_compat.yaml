@@ -5,7 +5,12 @@
 #   - embedding modellerine önek (query:/passage:) verilmez
 #   - BM25: İngilizce stemmer + İngilizce stopword (llama-index varsayılanı)
 #   - hybrid: "simple" füzyon (ham skorların maksimumu)
+#   - v1'de SimpleDirectoryReader her parçanın başına "file_path: <Kaggle yolu>" ekliyordu
+#     (parça boyutundan yer yer, embedding ve BM25 metnine girer, exact metriğine girmez)
 name: v1_compat
+
+# v1 notebook'undaki BASE_PATH + "stage2_cleaned"
+v1_path: &v1p /kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned
 
 data:
   docs_dir: data/processed/stage2_cleaned
@@ -26,28 +31,28 @@ runtime:
 
 systems:
   - name: RAG-1 (bge-m3)
-    chunking: {type: sentence, size: 512, overlap: 128}
+    chunking: {type: sentence, size: 512, overlap: 128, v1_file_path_prefix: *v1p}
     retriever: {type: dense, model: BAAI/bge-m3, prefixes: none}
   - name: RAG-2 (multilingual-e5-large)
-    chunking: {type: sentence, size: 512, overlap: 128}
+    chunking: {type: sentence, size: 512, overlap: 128, v1_file_path_prefix: *v1p}
     retriever: {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
   - name: RAG-3 (paraphrase-multilingual-mpnet-base-v2)
-    chunking: {type: sentence, size: 512, overlap: 128}
+    chunking: {type: sentence, size: 512, overlap: 128, v1_file_path_prefix: *v1p}
     retriever: {type: dense, model: sentence-transformers/paraphrase-multilingual-mpnet-base-v2, prefixes: none}
   - name: RAG-4 (256/50)
-    chunking: {type: sentence, size: 256, overlap: 50}
+    chunking: {type: sentence, size: 256, overlap: 50, v1_file_path_prefix: *v1p}
     retriever: {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
   - name: RAG-5 (1024/200)
-    chunking: {type: sentence, size: 1024, overlap: 200}
+    chunking: {type: sentence, size: 1024, overlap: 200, v1_file_path_prefix: *v1p}
     retriever: {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
   - name: RAG-6 (Header Based)
-    chunking: {type: markdown}
+    chunking: {type: markdown, v1_file_path_prefix: *v1p}
     retriever: {type: dense, model: intfloat/multilingual-e5-large, prefixes: none}
   - name: RAG-7 (BM25 Only)
-    chunking: {type: sentence, size: 1024, overlap: 200}
+    chunking: {type: sentence, size: 1024, overlap: 200, v1_file_path_prefix: *v1p}
     retriever: {type: bm25, tokenizer: v1_en}
   - name: RAG-8 (Hybrid simple)
-    chunking: {type: sentence, size: 1024, overlap: 200}
+    chunking: {type: sentence, size: 1024, overlap: 200, v1_file_path_prefix: *v1p}
     retriever:
       type: hybrid
       mode: simple

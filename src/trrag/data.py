@@ -54,6 +54,12 @@ def load_corpus(docs_dir: str | Path) -> dict[str, str]:
     return docs
 
 
+def corpus_relpaths(docs_dir: str | Path) -> dict[str, str]:
+    """``{doc_id: klasöre göre göreli yol}`` (ör. ``tip_cleaned/t01.md``)."""
+    root = Path(docs_dir)
+    return {doc_id_from_name(p.name): p.relative_to(root).as_posix() for p in sorted(root.rglob("*.md"))}
+
+
 def is_context_dependent(question: str) -> bool:
     return bool(_CONTEXT_DEPENDENT_RE.search(question))
 

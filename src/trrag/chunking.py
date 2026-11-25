@@ -9,6 +9,7 @@ from dataclasses import dataclass
 
 from llama_index.core import Document
 from llama_index.core.node_parser import MarkdownNodeParser, SentenceSplitter
+from llama_index.core.schema import MetadataMode
 
 
 @dataclass(frozen=True)
@@ -16,6 +17,13 @@ class Chunk:
     chunk_id: str
     doc_id: str
     text: str
+    # Retriever'ların indekslediği metin. Varsayılan olarak ``text`` ile aynıdır;
+    # v1 uyumluluk modunda başına "file_path: ..." meta verisi eklenir.
+    index_text: str | None = None
+
+    @property
+    def retrieval_text(self) -> str:
+        return self.index_text if self.index_text is not None else self.text
 
 
 def _hf_tokenizer(name: str):
@@ -44,18 +52,33 @@ def chunk_key(spec: dict) -> str:
     kind = spec.get("type", "sentence")
     if kind == "sentence":
         key = f"sentence-{spec['size']}-{spec['overlap']}"
-        return f"{key}-{spec['tokenizer'].replace('/', '_')}" if spec.get("tokenizer") else key
-    return kind
+        if spec.get("tokenizer"):
+            key += f"-{spec['tokenizer'].replace('/', '_')}"
+    else:
+        key = kind
+    return key + "-v1meta" if spec.get("v1_file_path_prefix") else key
 
 
-def chunk_corpus(docs: dict[str, str], spec: dict) -> list[Chunk]:
+def chunk_corpus(docs: dict[str, str], spec: dict, doc_relpaths: dict[str, str] | None = None) -> list[Chunk]:
     """Derlemi parçalara böler. Boş parçalar atılır.
 
-    Not: v1'de SimpleDirectoryReader dosya yolu/adı gibi meta verileri parça boyutu
-    hesabına ve embedding metnine dahil ediyordu. Burada sadece doküman metni kullanılır.
+    Varsayılan olarak sadece doküman metni kullanılır.
+
+    ``v1_file_path_prefix`` verilirse v1 davranışı taklit edilir: v1'de SimpleDirectoryReader
+    her dokümana ``file_path`` meta verisi ekliyordu. Bu meta veri parça boyutu hesabından yer
+    yiyor, embedding ve BM25 metninin başına "file_path: <yol>" olarak ekleniyordu
+    (exact metriği ise sadece parça metnine bakıyordu).
     """
     splitter = make_splitter(spec)
-    documents = [Document(text=text, id_=doc_id) for doc_id, text in docs.items()]
+    prefix = spec.get("v1_file_path_prefix")
+    documents = []
+    for doc_id, text in docs.items():
+        if prefix:
+            rel = (doc_relpaths or {}).get(doc_id, f"{doc_id}.md")
+            doc = Document(text=text, id_=doc_id, metadata={"file_path": f"{prefix.rstrip('/')}/{rel}"})
+        else:
+            doc = Document(text=text, id_=doc_id)
+        documents.append(doc)
     nodes = splitter.get_nodes_from_documents(documents)
     chunks: list[Chunk] = []
     counters: dict[str, int] = {}
@@ -66,5 +89,6 @@ def chunk_corpus(docs: dict[str, str], spec: dict) -> list[Chunk]:
         doc_id = node.ref_doc_id
         n = counters.get(doc_id, 0)
         counters[doc_id] = n + 1
-        chunks.append(Chunk(chunk_id=f"{doc_id}#{n}", doc_id=doc_id, text=text))
+        index_text = node.get_content(metadata_mode=MetadataMode.EMBED).strip() if prefix else None
+        chunks.append(Chunk(chunk_id=f"{doc_id}#{n}", doc_id=doc_id, text=text, index_text=index_text))
     return chunks

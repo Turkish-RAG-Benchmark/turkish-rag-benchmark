@@ -104,7 +104,7 @@ class DenseRetriever:
         limit = self.model.max_seq_length
         n = 0
         for i in range(0, len(chunks), 256):
-            lengths = tok([c.text for c in chunks[i:i + 256]], add_special_tokens=True,
+            lengths = tok([c.retrieval_text for c in chunks[i:i + 256]], add_special_tokens=True,
                           truncation=False)["input_ids"]
             n += sum(len(x) > limit for x in lengths)
         return n
@@ -120,13 +120,13 @@ class DenseRetriever:
             h = hashlib.sha1()
             h.update(f"{self.model_name}|{self.p_kwargs}|{self.model.max_seq_length}".encode())
             for c in chunks:
-                h.update(c.text.encode("utf-8"))
+                h.update(c.retrieval_text.encode("utf-8"))
                 h.update(b"\0")
             cache_file = Path(cache_dir) / "embeddings" / f"{h.hexdigest()}.npy"
             if cache_file.exists():
                 log.info("Embedding cache kullanılıyor: %s", cache_file.name)
                 return np.load(cache_file).astype(np.float32)
-        emb = self._encode([c.text for c in chunks], self.p_kwargs, show_progress=True)
+        emb = self._encode([c.retrieval_text for c in chunks], self.p_kwargs, show_progress=True)
         if cache_file:
             cache_file.parent.mkdir(parents=True, exist_ok=True)
             np.save(cache_file, emb.astype(np.float16))
@@ -153,7 +153,7 @@ class BM25Retriever:
     def __init__(self, chunks: list[Chunk], tokenizer: str = "tr_snowball", k1: float = 1.5, b: float = 0.75):
         self.tokenize = bm25_tokenizer(tokenizer)
         self.stats = {"tokenizer": tokenizer, "k1": k1, "b": b}
-        docs = [Counter(self.tokenize(c.text)) for c in chunks]
+        docs = [Counter(self.tokenize(c.retrieval_text)) for c in chunks]
         vocab: dict[str, int] = {}
         rows, cols, tfs = [], [], []
         for j, counts in enumerate(docs):

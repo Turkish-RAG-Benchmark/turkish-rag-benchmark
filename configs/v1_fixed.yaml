@@ -80,6 +80,19 @@ systems:
         - {type: dense, model: intfloat/multilingual-e5-large}
         - {type: bm25, tokenizer: tr_snowball}
 
+  # H4: aynı sıralamalar, v1 metrik ayarlarıyla (substring exact + kopya dokümanlar ayrı)
+  - name: "ABL RAG-5 v1 metrik (H4)"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: dense, model: intfloat/multilingual-e5-large}
+    eval: {exact_mode: v1_substring, merge_duplicate_docs: false}
+  - name: "ABL RAG-7 v1 metrik (H4)"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: bm25, tokenizer: tr_snowball}
+    eval: {exact_mode: v1_substring, merge_duplicate_docs: false}
+  - name: "ABL RAG-7 BM25 v1_en (H2)"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: bm25, tokenizer: v1_en}
+
   # --- Yeni model (8 GB VRAM'e sığar) ---
   - name: "NEW Qwen3-Embedding-0.6B"
     chunking: {type: sentence, size: 512, overlap: 128}
@@ -91,4 +104,10 @@ comparisons:
   - ["RAG-8 (Hybrid RRF)", "ABL hybrid simple (H1)"]
   - ["RAG-2 (multilingual-e5-large)", "ABL e5 önek yok (H3)"]
   - ["RAG-2 (multilingual-e5-large)", "RAG-1 (bge-m3)"]
+  - ["RAG-5 (1024/200)", "RAG-4 (256/50)"]
+  - ["RAG-5 (1024/200)", "RAG-6 (Header Based)"]
+  - ["RAG-7 (BM25 Only)", "ABL RAG-7 BM25 v1_en (H2)"]
+  - ["RAG-7 (BM25 Only)", "RAG-5 (1024/200)"]
+  - ["ABL hybrid relative_score", "RAG-7 (BM25 Only)"]
+  - ["NEW Qwen3-Embedding-0.6B", "RAG-2 (multilingual-e5-large)"]
 comparison_k: 5

@@ -23,7 +23,8 @@ import pandas as pd
 import yaml
 
 from .chunking import Chunk, chunk_corpus, chunk_key
-from .data import V1_DUPLICATE_DOCS, QAItem, canonical_doc, is_context_dependent, load_corpus, load_qa
+from .data import (V1_DUPLICATE_DOCS, QAItem, canonical_doc, corpus_relpaths, is_context_dependent,
+                   load_corpus, load_qa)
 from .metrics import NOT_FOUND, ExactMatcher, bootstrap_ci, first_rank, paired_permutation_test, rank_metrics
 from .retrievers import BM25Retriever, DenseRetriever, fuse, resolve_local_model
 
@@ -46,6 +47,7 @@ class Runner:
         self.root = config_path.parent.parent if config_path.parent.name == "configs" else Path.cwd()
         data_cfg = config["data"]
         self.docs = load_corpus(self._path(data_cfg["docs_dir"]))
+        self.doc_relpaths = corpus_relpaths(self._path(data_cfg["docs_dir"]))
         self.qa: list[QAItem] = load_qa(self._path(data_cfg["qa_dir"]))
         if limit:  # hızlı deneme için: her alandan ilk n soru
             n = max(1, limit // len({q.domain for q in self.qa}))
@@ -82,7 +84,7 @@ class Runner:
         key = chunk_key(spec)
         if key not in self._chunks:
             t = time.time()
-            self._chunks[key] = chunk_corpus(self.docs, spec)
+            self._chunks[key] = chunk_corpus(self.docs, spec, self.doc_relpaths)
             words = np.array([len(c.text.split()) for c in self._chunks[key]])
             self.stats[f"chunks:{key}"] = {
                 "n_chunks": len(words), "words_mean": round(float(words.mean()), 1),
@@ -217,7 +219,11 @@ def wide_table(summary: pd.DataFrame, subset: str = "all") -> pd.DataFrame:
 
 def compare(per_query: pd.DataFrame, pairs: list, k: int, seed: int) -> pd.DataFrame:
     out = []
+    present = set(per_query.system)
     for a, b in pairs:
+        if a not in present or b not in present:
+            log.warning("Karşılaştırma atlandı (sistem bu koşuda yok): %s vs %s", a, b)
+            continue
         da = per_query[per_query.system == a].set_index("qid")
         db = per_query[per_query.system == b].set_index("qid").loc[da.index]
         for level in ("doc", "exact"):
