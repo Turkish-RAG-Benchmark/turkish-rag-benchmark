@@ -137,6 +137,12 @@ Her koşu `results/runs/<config>/<zaman>/` altına şu dosyaları yazar:
 | `comparisons.csv` | Config'te tanımlanan sistem çiftleri için anlamlılık testleri |
 | `run.json` | Config, ortam bilgisi, parça istatistikleri, hatalar |
 
+Grafikler sonuç dosyalarından yeniden üretilebilir (`pip install -e ".[figures]"` gerekir):
+
+```bash
+python scripts/make_figures.py --run results/v1_fixed --out results/figures/v1.1
+```
+
 Yoğun (dense) modellerin parça embedding'leri `.cache/` altında saklanır; aynı ayarlarla tekrar koşulduğunda yeniden hesaplanmaz. Modeller yerel bir klasörde duruyorsa `TRRAG_MODEL_DIRS` ortam değişkeniyle gösterilebilir (`<klasör>/<org>__<model>` yapısında).
 
 ## Değerlendirme yöntemi
@@ -196,6 +202,12 @@ K=5, 2132 soru. Köşeli parantez içindeki değerler %95 güven aralığıdır.
 
 Tüm K değerleri, alt kümeler ve karşılaştırmalar: [`results/v1_fixed/`](results/v1_fixed/).
 
+![Sistemlerin genel performansı](results/figures/v1.1/overall_performance.png)
+
+![K değerine göre başarı](results/figures/v1.1/top_k_curves.png)
+
+![Alanlara göre cevap bulma başarısı](results/figures/v1.1/exact_mrr_by_domain.png)
+
 ### Bulgular
 
 1. **Embedding modelleri:** e5-large ile bge-m3 eşdeğerdir (Exact_MRR@5 p=0.69, Doc_MRR@5 p=0.44). Qwen3-Embedding-0.6B her ikisinden de anlamlı ölçüde düşüktür (p<0.001). e5 öneklerinin anlamlı bir etkisi yoktur (p=0.28).
@@ -224,7 +236,11 @@ v1'in değerlendirme notebook'unda (`notebooks/rag-benchmarks.ipynb`) sonuçlar�
 | H10 | mpnet'in 128 token sınırı nedeniyle parçaların %98'i kesildi | Model metnin çoğunu görmedi | Not edildi |
 | — | Kopya dokümanlar farklı doküman sayıldı | Doğru metni getiren sistem hatalı sayıldı | Aynı doküman kabul ediliyor |
 
-v1'in orijinal sonuçları [`results/tables/rag_evaluation_results.csv`](results/tables/rag_evaluation_results.csv) ve `results/figures/` altında korunmaktadır. v1 ile v1.1'in sistem bazında karşılaştırması: [`results/v1_original_vs_fixed.csv`](results/v1_original_vs_fixed.csv).
+![v1 ile v1.1 karşılaştırması](results/figures/v1.1/v1_vs_v1.1.png)
+
+Doküman düzeyindeki küçük artışlar kopya dokümanların birleştirilmesinden, exact düzeyindeki düşüşler ise metriğin düzeltilmesinden (H4) kaynaklanır. mpnet'teki büyük artışın sebebi, v1'de her parçanın başına eklenen dosya yolu meta verisinin modelin zaten kısa olan 128 token'lık girdisinden yer yemesidir: diğer her şey aynıyken yalnızca bu meta veriyi kaldırmak Doc_MRR@5'i 0.761'den 0.838'e çıkarır (p<0.001).
+
+v1'in orijinal sonuçları [`results/tables/rag_evaluation_results.csv`](results/tables/rag_evaluation_results.csv) ve `results/figures/` altında (v1 grafikleri) korunmaktadır. v1 ile v1.1'in sistem bazında karşılaştırması: [`results/v1_original_vs_fixed.csv`](results/v1_original_vs_fixed.csv).
 
 ## Proje yapısı
 
@@ -244,11 +260,12 @@ turkish-rag-benchmark/
 │   ├── metrics.py            Metrikler, bootstrap, permütasyon testi
 │   └── evaluate.py           Deney çalıştırıcı (CLI)
 ├── configs/                  Deney tanımları
-├── scripts/                  Yardımcı betikler (koşu karşılaştırma)
+├── scripts/                  Yardımcı betikler (koşu karşılaştırma, grafikler)
 ├── tests/                    Birim testleri
 ├── results/
 │   ├── v1_fixed/             v1.1 sonuçları
 │   ├── v1_compat/            v1'in yeniden üretimi
+│   ├── figures/v1.1/         v1.1 grafikleri
 │   ├── tables/, figures/     v1'in orijinal sonuçları
 │   └── *.csv                 v1 karşılaştırma tabloları
 └── notebooks/                v1 notebook'ları (PDF dönüştürme, orijinal değerlendirme)
