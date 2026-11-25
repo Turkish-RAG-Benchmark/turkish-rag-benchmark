@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import platform
 import sys
 import time
@@ -24,7 +25,7 @@ import yaml
 from .chunking import Chunk, chunk_corpus, chunk_key
 from .data import V1_DUPLICATE_DOCS, QAItem, canonical_doc, is_context_dependent, load_corpus, load_qa
 from .metrics import NOT_FOUND, ExactMatcher, bootstrap_ci, first_rank, paired_permutation_test, rank_metrics
-from .retrievers import BM25Retriever, DenseRetriever, fuse
+from .retrievers import BM25Retriever, DenseRetriever, fuse, resolve_local_model
 
 log = logging.getLogger("trrag")
 
@@ -36,7 +37,7 @@ DEFAULT_EVAL = {
     "bootstrap": 1000,
     "seed": 42,
 }
-DEFAULT_RUNTIME = {"device": None, "batch_size": 16, "cache_dir": ".cache"}
+DEFAULT_RUNTIME = {"device": None, "batch_size": 16, "cache_dir": ".cache", "model_dirs": []}
 
 
 class Runner:
@@ -57,6 +58,10 @@ class Runner:
             self.qa = kept
         self.eval_defaults = {**DEFAULT_EVAL, **config.get("eval", {})}
         self.runtime = {**DEFAULT_RUNTIME, **config.get("runtime", {})}
+        # Makineye özel model klasörleri config'e değil ortam değişkenine yazılır
+        env_dirs = os.environ.get("TRRAG_MODEL_DIRS")
+        if env_dirs:
+            self.runtime["model_dirs"] = list(self.runtime["model_dirs"]) + env_dirs.split(os.pathsep)
         if self.runtime["cache_dir"]:
             self.runtime["cache_dir"] = str(self._path(self.runtime["cache_dir"]))
         self._chunks: dict[str, list[Chunk]] = {}
@@ -128,6 +133,7 @@ class Runner:
                 cache_dir=self.runtime["cache_dir"], max_seq_length=spec.get("max_seq_length"),
                 trust_remote_code=bool(spec.get("trust_remote_code", False)),
                 dtype=spec.get("dtype", self.runtime.get("dtype")),
+                local_path=resolve_local_model(spec["model"], self.runtime["model_dirs"]),
             )
         if kind == "bm25":
             return BM25Retriever(chunks, tokenizer=spec.get("tokenizer", "tr_snowball"),
@@ -137,7 +143,8 @@ class Runner:
     def _rerank(self, spec, chunks, queries, base, k):
         from sentence_transformers import CrossEncoder
 
-        model = CrossEncoder(spec["model"], device=self.runtime["device"],
+        path = resolve_local_model(spec["model"], self.runtime["model_dirs"])
+        model = CrossEncoder(str(path or spec["model"]), device=self.runtime["device"],
                              max_length=int(spec.get("max_length", 512)))
         out = []
         for q, ranking in zip(queries, base):

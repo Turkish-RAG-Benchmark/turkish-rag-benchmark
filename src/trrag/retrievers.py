@@ -34,6 +34,15 @@ KNOWN_PREFIXES: dict[str, tuple[str, str]] = {
 }
 
 
+def resolve_local_model(model: str, model_dirs: list[str] | None) -> Path | None:
+    """``model_dirs`` içinde ``<org>__<isim>`` klasörü varsa onu döndürür (Hub'a gitmeden yükleme)."""
+    for d in model_dirs or []:
+        p = Path(d) / model.replace("/", "__")
+        if (p / "config.json").exists():
+            return p
+    return None
+
+
 def _top_k(scores: np.ndarray, k: int) -> Ranking:
     k = min(k, scores.shape[0])
     idx = np.argpartition(-scores, k - 1)[:k]
@@ -56,13 +65,14 @@ class DenseRetriever:
         max_seq_length: int | None = None,
         trust_remote_code: bool = False,
         dtype: str | None = None,
+        local_path: str | Path | None = None,
     ):
         from sentence_transformers import SentenceTransformer
 
         self.model_name = model
         model_kwargs = {"dtype": dtype} if dtype else None
-        self.model = SentenceTransformer(model, device=device, trust_remote_code=trust_remote_code,
-                                         model_kwargs=model_kwargs)
+        self.model = SentenceTransformer(str(local_path or model), device=device,
+                                         trust_remote_code=trust_remote_code, model_kwargs=model_kwargs)
         if max_seq_length:
             self.model.max_seq_length = int(max_seq_length)
         self.batch_size = batch_size
