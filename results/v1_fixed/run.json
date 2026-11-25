@@ -1,0 +1,490 @@
+{
+  "config": {
+    "name": "v1_fixed",
+    "data": {
+      "docs_dir": "data/processed/stage2_cleaned",
+      "qa_dir": "data/benchmark"
+    },
+    "eval": {
+      "k_values": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "exact_mode": "token",
+      "exact_threshold": 0.7,
+      "merge_duplicate_docs": true,
+      "bootstrap": 1000,
+      "seed": 42
+    },
+    "runtime": {
+      "device": null,
+      "batch_size": 16,
+      "cache_dir": ".cache",
+      "dtype": null
+    },
+    "systems": [
+      {
+        "name": "RAG-1 (bge-m3)",
+        "chunking": {
+          "type": "sentence",
+          "size": 512,
+          "overlap": 128
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "BAAI/bge-m3"
+        }
+      },
+      {
+        "name": "RAG-2 (multilingual-e5-large)",
+        "chunking": {
+          "type": "sentence",
+          "size": 512,
+          "overlap": 128
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large"
+        }
+      },
+      {
+        "name": "RAG-3 (paraphrase-multilingual-mpnet-base-v2)",
+        "chunking": {
+          "type": "sentence",
+          "size": 512,
+          "overlap": 128
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+        }
+      },
+      {
+        "name": "RAG-4 (256/50)",
+        "chunking": {
+          "type": "sentence",
+          "size": 256,
+          "overlap": 50
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large"
+        }
+      },
+      {
+        "name": "RAG-5 (1024/200)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large"
+        }
+      },
+      {
+        "name": "RAG-6 (Header Based)",
+        "chunking": {
+          "type": "markdown"
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large"
+        }
+      },
+      {
+        "name": "RAG-7 (BM25 Only)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200
+        },
+        "retriever": {
+          "type": "bm25",
+          "tokenizer": "tr_snowball"
+        }
+      },
+      {
+        "name": "RAG-8 (Hybrid RRF)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200
+        },
+        "retriever": {
+          "type": "hybrid",
+          "mode": "rrf",
+          "candidate_k": 50,
+          "components": [
+            {
+              "type": "dense",
+              "model": "intfloat/multilingual-e5-large"
+            },
+            {
+              "type": "bm25",
+              "tokenizer": "tr_snowball"
+            }
+          ]
+        }
+      },
+      {
+        "name": "ABL e5 önek yok (H3)",
+        "chunking": {
+          "type": "sentence",
+          "size": 512,
+          "overlap": 128
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large",
+          "prefixes": "none"
+        }
+      },
+      {
+        "name": "ABL hybrid simple (H1)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200
+        },
+        "retriever": {
+          "type": "hybrid",
+          "mode": "simple",
+          "candidate_k": 10,
+          "components": [
+            {
+              "type": "dense",
+              "model": "intfloat/multilingual-e5-large"
+            },
+            {
+              "type": "bm25",
+              "tokenizer": "tr_snowball"
+            }
+          ]
+        }
+      },
+      {
+        "name": "ABL hybrid relative_score",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200
+        },
+        "retriever": {
+          "type": "hybrid",
+          "mode": "relative_score",
+          "candidate_k": 50,
+          "components": [
+            {
+              "type": "dense",
+              "model": "intfloat/multilingual-e5-large"
+            },
+            {
+              "type": "bm25",
+              "tokenizer": "tr_snowball"
+            }
+          ]
+        }
+      },
+      {
+        "name": "ABL RAG-5 v1 metrik (H4)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large"
+        },
+        "eval": {
+          "exact_mode": "v1_substring",
+          "merge_duplicate_docs": false
+        }
+      },
+      {
+        "name": "ABL RAG-7 v1 metrik (H4)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200
+        },
+        "retriever": {
+          "type": "bm25",
+          "tokenizer": "tr_snowball"
+        },
+        "eval": {
+          "exact_mode": "v1_substring",
+          "merge_duplicate_docs": false
+        }
+      },
+      {
+        "name": "ABL RAG-7 BM25 v1_en (H2)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200
+        },
+        "retriever": {
+          "type": "bm25",
+          "tokenizer": "v1_en"
+        }
+      },
+      {
+        "name": "NEW Qwen3-Embedding-0.6B",
+        "chunking": {
+          "type": "sentence",
+          "size": 512,
+          "overlap": 128
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "Qwen/Qwen3-Embedding-0.6B"
+        }
+      }
+    ],
+    "comparisons": [
+      [
+        "RAG-8 (Hybrid RRF)",
+        "RAG-7 (BM25 Only)"
+      ],
+      [
+        "RAG-8 (Hybrid RRF)",
+        "RAG-5 (1024/200)"
+      ],
+      [
+        "RAG-8 (Hybrid RRF)",
+        "ABL hybrid simple (H1)"
+      ],
+      [
+        "RAG-2 (multilingual-e5-large)",
+        "ABL e5 önek yok (H3)"
+      ],
+      [
+        "RAG-2 (multilingual-e5-large)",
+        "RAG-1 (bge-m3)"
+      ],
+      [
+        "RAG-5 (1024/200)",
+        "RAG-4 (256/50)"
+      ],
+      [
+        "RAG-5 (1024/200)",
+        "RAG-6 (Header Based)"
+      ],
+      [
+        "RAG-7 (BM25 Only)",
+        "ABL RAG-7 BM25 v1_en (H2)"
+      ],
+      [
+        "RAG-7 (BM25 Only)",
+        "RAG-5 (1024/200)"
+      ],
+      [
+        "ABL hybrid relative_score",
+        "RAG-7 (BM25 Only)"
+      ],
+      [
+        "NEW Qwen3-Embedding-0.6B",
+        "RAG-2 (multilingual-e5-large)"
+      ]
+    ],
+    "comparison_k": 5
+  },
+  "config_path": "configs/v1_fixed.yaml",
+  "environment": {
+    "python": "3.13.2",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "llama-index-core": "0.14.26",
+    "sentence-transformers": "5.6.1",
+    "transformers": "5.13.1",
+    "torch": "2.11.0+cu128",
+    "PyStemmer": "3.1.0",
+    "cuda": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "n_docs": 235,
+  "n_questions": 2132,
+  "retriever_stats": {
+    "chunks:sentence-512-128": {
+      "n_chunks": 8056,
+      "words_mean": 145.2,
+      "words_median": 146.0,
+      "words_p95": 176.0,
+      "words_max": 300
+    },
+    "[{\"model\": \"BAAI/bge-m3\", \"type\": \"dense\"}, \"sentence-512-128\", 10]": {
+      "model": "BAAI/bge-m3",
+      "max_seq_length": 8192,
+      "query_prompt": {},
+      "passage_prompt": {},
+      "truncated_chunks": 0,
+      "seconds": 352.6,
+      "n_chunks": 8056
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"type\": \"dense\"}, \"sentence-512-128\", 10]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {
+        "prompt": "query: "
+      },
+      "passage_prompt": {
+        "prompt": "passage: "
+      },
+      "truncated_chunks": 16,
+      "seconds": 21.9,
+      "n_chunks": 8056
+    },
+    "[{\"model\": \"sentence-transformers/paraphrase-multilingual-mpnet-base-v2\", \"type\": \"dense\"}, \"sentence-512-128\", 10]": {
+      "model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "max_seq_length": 128,
+      "query_prompt": {},
+      "passage_prompt": {},
+      "truncated_chunks": 7907,
+      "seconds": 45.3,
+      "n_chunks": 8056
+    },
+    "chunks:sentence-256-50": {
+      "n_chunks": 15201,
+      "words_mean": 67.7,
+      "words_median": 68.0,
+      "words_p95": 88.0,
+      "words_max": 160
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"type\": \"dense\"}, \"sentence-256-50\", 10]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {
+        "prompt": "query: "
+      },
+      "passage_prompt": {
+        "prompt": "passage: "
+      },
+      "truncated_chunks": 0,
+      "seconds": 19.4,
+      "n_chunks": 15201
+    },
+    "chunks:sentence-1024-200": {
+      "n_chunks": 3808,
+      "words_mean": 296.5,
+      "words_median": 303.0,
+      "words_p95": 351.0,
+      "words_max": 573
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"type\": \"dense\"}, \"sentence-1024-200\", 10]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {
+        "prompt": "query: "
+      },
+      "passage_prompt": {
+        "prompt": "passage: "
+      },
+      "truncated_chunks": 2993,
+      "seconds": 19.1,
+      "n_chunks": 3808
+    },
+    "chunks:markdown": {
+      "n_chunks": 2960,
+      "words_mean": 322.4,
+      "words_median": 191.0,
+      "words_p95": 1065.6999999999962,
+      "words_max": 5265
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"type\": \"dense\"}, \"markdown\", 10]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {
+        "prompt": "query: "
+      },
+      "passage_prompt": {
+        "prompt": "passage: "
+      },
+      "truncated_chunks": 1123,
+      "seconds": 18.8,
+      "n_chunks": 2960
+    },
+    "[{\"tokenizer\": \"tr_snowball\", \"type\": \"bm25\"}, \"sentence-1024-200\", 10]": {
+      "tokenizer": "tr_snowball",
+      "k1": 1.5,
+      "b": 0.75,
+      "vocab_size": 44952,
+      "seconds": 2.7,
+      "n_chunks": 3808
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"type\": \"dense\"}, \"sentence-1024-200\", 50]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {
+        "prompt": "query: "
+      },
+      "passage_prompt": {
+        "prompt": "passage: "
+      },
+      "truncated_chunks": 2993,
+      "seconds": 18.9,
+      "n_chunks": 3808
+    },
+    "[{\"tokenizer\": \"tr_snowball\", \"type\": \"bm25\"}, \"sentence-1024-200\", 50]": {
+      "tokenizer": "tr_snowball",
+      "k1": 1.5,
+      "b": 0.75,
+      "vocab_size": 44952,
+      "seconds": 2.9,
+      "n_chunks": 3808
+    },
+    "[{\"candidate_k\": 50, \"components\": [{\"model\": \"intfloat/multilingual-e5-large\", \"type\": \"dense\"}, {\"tokenizer\": \"tr_snowball\", \"type\": \"bm25\"}], \"mode\": \"rrf\", \"type\": \"hybrid\"}, \"sentence-1024-200\", 10]": {
+      "mode": "rrf",
+      "candidate_k": 50,
+      "seconds": 21.9,
+      "n_chunks": 3808
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"prefixes\": \"none\", \"type\": \"dense\"}, \"sentence-512-128\", 10]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {},
+      "passage_prompt": {},
+      "truncated_chunks": 16,
+      "seconds": 19.0,
+      "n_chunks": 8056
+    },
+    "[{\"candidate_k\": 10, \"components\": [{\"model\": \"intfloat/multilingual-e5-large\", \"type\": \"dense\"}, {\"tokenizer\": \"tr_snowball\", \"type\": \"bm25\"}], \"mode\": \"simple\", \"type\": \"hybrid\"}, \"sentence-1024-200\", 10]": {
+      "mode": "simple",
+      "candidate_k": 10,
+      "seconds": 0.0,
+      "n_chunks": 3808
+    },
+    "[{\"candidate_k\": 50, \"components\": [{\"model\": \"intfloat/multilingual-e5-large\", \"type\": \"dense\"}, {\"tokenizer\": \"tr_snowball\", \"type\": \"bm25\"}], \"mode\": \"relative_score\", \"type\": \"hybrid\"}, \"sentence-1024-200\", 10]": {
+      "mode": "relative_score",
+      "candidate_k": 50,
+      "seconds": 0.1,
+      "n_chunks": 3808
+    },
+    "[{\"tokenizer\": \"v1_en\", \"type\": \"bm25\"}, \"sentence-1024-200\", 10]": {
+      "tokenizer": "v1_en",
+      "k1": 1.5,
+      "b": 0.75,
+      "vocab_size": 80892,
+      "seconds": 5.7,
+      "n_chunks": 3808
+    },
+    "[{\"model\": \"Qwen/Qwen3-Embedding-0.6B\", \"type\": \"dense\"}, \"sentence-512-128\", 10]": {
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "max_seq_length": 32768,
+      "query_prompt": {
+        "prompt_name": "query"
+      },
+      "passage_prompt": {},
+      "truncated_chunks": 0,
+      "seconds": 341.7,
+      "n_chunks": 8056
+    }
+  },
+  "errors": {},
+  "queries_with_fewer_than_max_k_results": {},
+  "run_id": "20261125-211536"
+}

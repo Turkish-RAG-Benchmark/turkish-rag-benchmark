@@ -1,0 +1,266 @@
+{
+  "config": {
+    "name": "v1_compat",
+    "v1_path": "/kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned",
+    "data": {
+      "docs_dir": "data/processed/stage2_cleaned",
+      "qa_dir": "data/benchmark"
+    },
+    "eval": {
+      "k_values": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "exact_mode": "v1_substring",
+      "exact_threshold": 0.7,
+      "merge_duplicate_docs": false,
+      "bootstrap": 1000,
+      "seed": 42
+    },
+    "runtime": {
+      "device": null,
+      "batch_size": 16,
+      "cache_dir": ".cache"
+    },
+    "systems": [
+      {
+        "name": "RAG-1 (bge-m3)",
+        "chunking": {
+          "type": "sentence",
+          "size": 512,
+          "overlap": 128,
+          "v1_file_path_prefix": "/kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned"
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "BAAI/bge-m3",
+          "prefixes": "none"
+        }
+      },
+      {
+        "name": "RAG-2 (multilingual-e5-large)",
+        "chunking": {
+          "type": "sentence",
+          "size": 512,
+          "overlap": 128,
+          "v1_file_path_prefix": "/kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned"
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large",
+          "prefixes": "none"
+        }
+      },
+      {
+        "name": "RAG-3 (paraphrase-multilingual-mpnet-base-v2)",
+        "chunking": {
+          "type": "sentence",
+          "size": 512,
+          "overlap": 128,
+          "v1_file_path_prefix": "/kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned"
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+          "prefixes": "none"
+        }
+      },
+      {
+        "name": "RAG-4 (256/50)",
+        "chunking": {
+          "type": "sentence",
+          "size": 256,
+          "overlap": 50,
+          "v1_file_path_prefix": "/kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned"
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large",
+          "prefixes": "none"
+        }
+      },
+      {
+        "name": "RAG-5 (1024/200)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200,
+          "v1_file_path_prefix": "/kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned"
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large",
+          "prefixes": "none"
+        }
+      },
+      {
+        "name": "RAG-6 (Header Based)",
+        "chunking": {
+          "type": "markdown",
+          "v1_file_path_prefix": "/kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned"
+        },
+        "retriever": {
+          "type": "dense",
+          "model": "intfloat/multilingual-e5-large",
+          "prefixes": "none"
+        }
+      },
+      {
+        "name": "RAG-7 (BM25 Only)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200,
+          "v1_file_path_prefix": "/kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned"
+        },
+        "retriever": {
+          "type": "bm25",
+          "tokenizer": "v1_en"
+        }
+      },
+      {
+        "name": "RAG-8 (Hybrid simple)",
+        "chunking": {
+          "type": "sentence",
+          "size": 1024,
+          "overlap": 200,
+          "v1_file_path_prefix": "/kaggle/input/datasets/yekbun/turkish-rag-dataset/rag-dataset/stage2_cleaned"
+        },
+        "retriever": {
+          "type": "hybrid",
+          "mode": "simple",
+          "candidate_k": 10,
+          "components": [
+            {
+              "type": "dense",
+              "model": "intfloat/multilingual-e5-large",
+              "prefixes": "none"
+            },
+            {
+              "type": "bm25",
+              "tokenizer": "v1_en"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "config_path": "configs/v1_compat.yaml",
+  "environment": {
+    "python": "3.13.2",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "llama-index-core": "0.14.26",
+    "sentence-transformers": "5.6.1",
+    "transformers": "5.13.1",
+    "torch": "2.11.0+cu128",
+    "PyStemmer": "3.1.0",
+    "cuda": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "n_docs": 235,
+  "n_questions": 2132,
+  "retriever_stats": {
+    "chunks:sentence-512-128-v1meta": {
+      "n_chunks": 9042,
+      "words_mean": 132.5,
+      "words_median": 134.0,
+      "words_p95": 163.0,
+      "words_max": 286
+    },
+    "[{\"model\": \"BAAI/bge-m3\", \"prefixes\": \"none\", \"type\": \"dense\"}, \"sentence-512-128-v1meta\", 10]": {
+      "model": "BAAI/bge-m3",
+      "max_seq_length": 8192,
+      "query_prompt": {},
+      "passage_prompt": {},
+      "truncated_chunks": 0,
+      "seconds": 444.2,
+      "n_chunks": 9042
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"prefixes\": \"none\", \"type\": \"dense\"}, \"sentence-512-128-v1meta\", 10]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {},
+      "passage_prompt": {},
+      "truncated_chunks": 20,
+      "seconds": 397.5,
+      "n_chunks": 9042
+    },
+    "[{\"model\": \"sentence-transformers/paraphrase-multilingual-mpnet-base-v2\", \"prefixes\": \"none\", \"type\": \"dense\"}, \"sentence-512-128-v1meta\", 10]": {
+      "model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "max_seq_length": 128,
+      "query_prompt": {},
+      "passage_prompt": {},
+      "truncated_chunks": 9025,
+      "seconds": 50.8,
+      "n_chunks": 9042
+    },
+    "chunks:sentence-256-50-v1meta": {
+      "n_chunks": 18995,
+      "words_mean": 55.2,
+      "words_median": 56.0,
+      "words_p95": 74.0,
+      "words_max": 136
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"prefixes\": \"none\", \"type\": \"dense\"}, \"sentence-256-50-v1meta\", 10]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {},
+      "passage_prompt": {},
+      "truncated_chunks": 0,
+      "seconds": 414.1,
+      "n_chunks": 18995
+    },
+    "chunks:sentence-1024-200-v1meta": {
+      "n_chunks": 4013,
+      "words_mean": 283.6,
+      "words_median": 289.0,
+      "words_p95": 338.0,
+      "words_max": 573
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"prefixes\": \"none\", \"type\": \"dense\"}, \"sentence-1024-200-v1meta\", 10]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {},
+      "passage_prompt": {},
+      "truncated_chunks": 3525,
+      "seconds": 243.5,
+      "n_chunks": 4013
+    },
+    "chunks:markdown-v1meta": {
+      "n_chunks": 2960,
+      "words_mean": 322.4,
+      "words_median": 191.0,
+      "words_p95": 1065.6999999999962,
+      "words_max": 5265
+    },
+    "[{\"model\": \"intfloat/multilingual-e5-large\", \"prefixes\": \"none\", \"type\": \"dense\"}, \"markdown-v1meta\", 10]": {
+      "model": "intfloat/multilingual-e5-large",
+      "max_seq_length": 512,
+      "query_prompt": {},
+      "passage_prompt": {},
+      "truncated_chunks": 1244,
+      "seconds": 144.9,
+      "n_chunks": 2960
+    },
+    "[{\"tokenizer\": \"v1_en\", \"type\": \"bm25\"}, \"sentence-1024-200-v1meta\", 10]": {
+      "tokenizer": "v1_en",
+      "k1": 1.5,
+      "b": 0.75,
+      "vocab_size": 81117,
+      "seconds": 2.8,
+      "n_chunks": 4013
+    },
+    "[{\"candidate_k\": 10, \"components\": [{\"model\": \"intfloat/multilingual-e5-large\", \"prefixes\": \"none\", \"type\": \"dense\"}, {\"tokenizer\": \"v1_en\", \"type\": \"bm25\"}], \"mode\": \"simple\", \"type\": \"hybrid\"}, \"sentence-1024-200-v1meta\", 10]": {
+      "mode": "simple",
+      "candidate_k": 10,
+      "seconds": 0.0,
+      "n_chunks": 4013
+    }
+  },
+  "errors": {},
+  "queries_with_fewer_than_max_k_results": {},
+  "run_id": "20261125-204548"
+}

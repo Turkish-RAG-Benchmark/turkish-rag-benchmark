@@ -1,0 +1,1537 @@
+system,subset,level,metric,k,value,ci_low,ci_high,n
+RAG-1 (bge-m3),all,Doc,HitRate,1,0.8972795497185742,0.8846153846153846,0.9104127579737336,2132
+RAG-1 (bge-m3),all,Doc,MRR,1,0.8972795497185742,0.8846153846153846,0.9104127579737336,2132
+RAG-1 (bge-m3),all,Doc,nDCG,1,0.8972795497185742,0.8846153846153846,0.9104127579737336,2132
+RAG-1 (bge-m3),all,Doc,HitRate,3,0.9530956848030019,0.943234052532833,0.9610694183864915,2132
+RAG-1 (bge-m3),all,Doc,MRR,3,0.9233896185115696,0.9126739368355221,0.9336343026891808,2132
+RAG-1 (bge-m3),all,Doc,nDCG,3,0.9310831408737616,0.9207222378543803,0.9401374873633923,2132
+RAG-1 (bge-m3),all,Doc,HitRate,5,0.9685741088180112,0.9601313320825516,0.975609756097561,2132
+RAG-1 (bge-m3),all,Doc,MRR,5,0.9269074421513446,0.9165220450281427,0.9363512351469667,2132
+RAG-1 (bge-m3),all,Doc,nDCG,5,0.9374410067995774,0.9278454190082068,0.9457500729097036,2132
+RAG-1 (bge-m3),all,Doc,HitRate,10,0.9807692307692307,0.974202626641651,0.9859287054409006,2132
+RAG-1 (bge-m3),all,Doc,MRR,10,0.9285319693856279,0.9185054414589476,0.9378609677923703,2132
+RAG-1 (bge-m3),all,Doc,nDCG,10,0.9413811674307895,0.9328717426038208,0.9488784608996828,2132
+RAG-1 (bge-m3),all,Exact,HitRate,1,0.38555347091932457,0.36538461538461536,0.4066604127579737,2132
+RAG-1 (bge-m3),all,Exact,MRR,1,0.38555347091932457,0.36538461538461536,0.4066604127579737,2132
+RAG-1 (bge-m3),all,Exact,nDCG,1,0.38555347091932457,0.36538461538461536,0.4066604127579737,2132
+RAG-1 (bge-m3),all,Exact,HitRate,3,0.4929643527204503,0.47138836772983117,0.5150093808630394,2132
+RAG-1 (bge-m3),all,Exact,MRR,3,0.43425578486554095,0.4140849749843652,0.4547412445278299,2132
+RAG-1 (bge-m3),all,Exact,nDCG,3,0.44939184302968593,0.4294438695065856,0.4702641632304112,2132
+RAG-1 (bge-m3),all,Exact,HitRate,5,0.5309568480300187,0.5098499061913696,0.5530018761726079,2132
+RAG-1 (bge-m3),all,Exact,MRR,5,0.44297998749218265,0.4237306519699812,0.4631334036898061,2132
+RAG-1 (bge-m3),all,Exact,nDCG,5,0.46507599754481854,0.44642626667283647,0.4850424807461436,2132
+RAG-1 (bge-m3),all,Exact,HitRate,10,0.5600375234521576,0.53890712945591,0.5816135084427767,2132
+RAG-1 (bge-m3),all,Exact,MRR,10,0.4468689508323655,0.4279020509470204,0.4668137498510974,2132
+RAG-1 (bge-m3),all,Exact,nDCG,10,0.47449040934799636,0.4552858133423563,0.4936309306725158,2132
+RAG-1 (bge-m3),standalone,Doc,HitRate,1,0.9009304871373837,,,1827
+RAG-1 (bge-m3),standalone,Doc,MRR,1,0.9009304871373837,,,1827
+RAG-1 (bge-m3),standalone,Doc,nDCG,1,0.9009304871373837,,,1827
+RAG-1 (bge-m3),standalone,Doc,HitRate,3,0.9600437876299945,,,1827
+RAG-1 (bge-m3),standalone,Doc,MRR,3,0.9287538770297392,,,1827
+RAG-1 (bge-m3),standalone,Doc,nDCG,3,0.936865215143875,,,1827
+RAG-1 (bge-m3),standalone,Doc,HitRate,5,0.9726327312534209,,,1827
+RAG-1 (bge-m3),standalone,Doc,MRR,5,0.9316274402481299,,,1827
+RAG-1 (bge-m3),standalone,Doc,nDCG,5,0.9420471107800544,,,1827
+RAG-1 (bge-m3),standalone,Doc,HitRate,10,0.9841269841269841,,,1827
+RAG-1 (bge-m3),standalone,Doc,MRR,10,0.9331126575789959,,,1827
+RAG-1 (bge-m3),standalone,Doc,nDCG,10,0.9457148016124837,,,1827
+RAG-1 (bge-m3),standalone,Exact,HitRate,1,0.38752052545155996,,,1827
+RAG-1 (bge-m3),standalone,Exact,MRR,1,0.38752052545155996,,,1827
+RAG-1 (bge-m3),standalone,Exact,nDCG,1,0.38752052545155996,,,1827
+RAG-1 (bge-m3),standalone,Exact,HitRate,3,0.49261083743842365,,,1827
+RAG-1 (bge-m3),standalone,Exact,MRR,3,0.4355044699872286,,,1827
+RAG-1 (bge-m3),standalone,Exact,nDCG,3,0.450241940343266,,,1827
+RAG-1 (bge-m3),standalone,Exact,HitRate,5,0.5259989053092501,,,1827
+RAG-1 (bge-m3),standalone,Exact,MRR,5,0.4430578361612844,,,1827
+RAG-1 (bge-m3),standalone,Exact,nDCG,5,0.4639257834019142,,,1827
+RAG-1 (bge-m3),standalone,Exact,HitRate,10,0.5500821018062397,,,1827
+RAG-1 (bge-m3),standalone,Exact,MRR,10,0.4462456885691697,,,1827
+RAG-1 (bge-m3),standalone,Exact,nDCG,10,0.4716894637099805,,,1827
+RAG-1 (bge-m3),answerable,Doc,HitRate,1,0.9094466182224706,,,1789
+RAG-1 (bge-m3),answerable,Doc,MRR,1,0.9094466182224706,,,1789
+RAG-1 (bge-m3),answerable,Doc,nDCG,1,0.9094466182224706,,,1789
+RAG-1 (bge-m3),answerable,Doc,HitRate,3,0.9569591950810509,,,1789
+RAG-1 (bge-m3),answerable,Doc,MRR,3,0.9316191540898081,,,1789
+RAG-1 (bge-m3),answerable,Doc,nDCG,3,0.9381795546354718,,,1789
+RAG-1 (bge-m3),answerable,Doc,HitRate,5,0.9714924538848518,,,1789
+RAG-1 (bge-m3),answerable,Doc,MRR,5,0.9348891373206633,,,1789
+RAG-1 (bge-m3),answerable,Doc,nDCG,5,0.9441202375583355,,,1789
+RAG-1 (bge-m3),answerable,Doc,HitRate,10,0.9821129122414757,,,1789
+RAG-1 (bge-m3),answerable,Doc,MRR,10,0.9363322597531653,,,1789
+RAG-1 (bge-m3),answerable,Doc,nDCG,10,0.9475796156321675,,,1789
+RAG-1 (bge-m3),answerable,Exact,HitRate,1,0.4589155953046395,,,1789
+RAG-1 (bge-m3),answerable,Exact,MRR,1,0.4589155953046395,,,1789
+RAG-1 (bge-m3),answerable,Exact,nDCG,1,0.4589155953046395,,,1789
+RAG-1 (bge-m3),answerable,Exact,HitRate,3,0.5863610955841252,,,1789
+RAG-1 (bge-m3),answerable,Exact,MRR,3,0.5166759828582075,,,1789
+RAG-1 (bge-m3),answerable,Exact,nDCG,3,0.5346408494050974,,,1789
+RAG-1 (bge-m3),answerable,Exact,HitRate,5,0.6305198434879821,,,1789
+RAG-1 (bge-m3),answerable,Exact,MRR,5,0.5267933668716229,,,1789
+RAG-1 (bge-m3),answerable,Exact,nDCG,5,0.5528506114565875,,,1789
+RAG-1 (bge-m3),answerable,Exact,HitRate,10,0.665176076020123,,,1789
+RAG-1 (bge-m3),answerable,Exact,MRR,10,0.5314279503491354,,,1789
+RAG-1 (bge-m3),answerable,Exact,nDCG,10,0.564070022280721,,,1789
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,HitRate,1,0.88125,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,MRR,1,0.88125,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,nDCG,1,0.88125,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,HitRate,3,0.9666666666666667,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,MRR,3,0.921875,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,nDCG,3,0.9335052945312522,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,HitRate,5,0.9770833333333333,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,MRR,5,0.924375,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,nDCG,5,0.9379002091969357,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,HitRate,10,0.9875,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,MRR,10,0.9259085648148149,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Doc,nDCG,10,0.9414108684339643,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,HitRate,1,0.33125,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,MRR,1,0.33125,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,nDCG,1,0.33125,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,HitRate,3,0.42916666666666664,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,MRR,3,0.37569444444444444,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,nDCG,3,0.3894825242113116,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,HitRate,5,0.46041666666666664,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,MRR,5,0.38277777777777783,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,nDCG,5,0.4023020702847052,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,HitRate,10,0.49583333333333335,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,MRR,10,0.38757605820105817,,,480
+RAG-1 (bge-m3),domain:matematik-fizik,Exact,nDCG,10,0.41383028813096645,,,480
+RAG-1 (bge-m3),domain:ml-ai,Doc,HitRate,1,0.890728476821192,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,MRR,1,0.890728476821192,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,nDCG,1,0.890728476821192,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,HitRate,3,0.9602649006622517,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,MRR,3,0.9227373068432672,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,nDCG,3,0.9324333644276269,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,HitRate,5,0.9735099337748344,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,MRR,5,0.9260485651214129,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,nDCG,5,0.9381376897001222,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,HitRate,10,0.9867549668874173,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,MRR,10,0.9276214128035319,,,302
+RAG-1 (bge-m3),domain:ml-ai,Doc,nDCG,10,0.942228615053351,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,HitRate,1,0.38741721854304634,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,MRR,1,0.38741721854304634,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,nDCG,1,0.38741721854304634,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,HitRate,3,0.5264900662251656,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,MRR,3,0.44812362030905073,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,nDCG,3,0.4682257403737016,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,HitRate,5,0.5695364238410596,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,MRR,5,0.45838852097130245,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,nDCG,5,0.4863294622360777,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,HitRate,10,0.6059602649006622,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,MRR,10,0.4632424051298223,,,302
+RAG-1 (bge-m3),domain:ml-ai,Exact,nDCG,10,0.4981037573003842,,,302
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,HitRate,1,0.94,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,MRR,1,0.94,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,nDCG,1,0.94,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,HitRate,3,0.9725,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,MRR,3,0.9558333333333333,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,nDCG,3,0.9601778926071438,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,HitRate,5,0.9825,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,MRR,5,0.9580833333333334,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,nDCG,5,0.9642655394336833,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,HitRate,10,0.99,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,MRR,10,0.958951388888889,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Doc,nDCG,10,0.9665593516039676,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,HitRate,1,0.135,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,MRR,1,0.135,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,nDCG,1,0.135,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,HitRate,3,0.1775,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,MRR,3,0.155,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,nDCG,3,0.16083254137500103,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,HitRate,5,0.185,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,MRR,5,0.15649999999999997,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,nDCG,5,0.16373393742926004,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,HitRate,10,0.1875,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,MRR,10,0.15677777777777777,,,400
+RAG-1 (bge-m3),domain:sosyal-bilimler,Exact,nDCG,10,0.16448651241842,,,400
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,HitRate,1,0.84,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,MRR,1,0.84,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,nDCG,1,0.84,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,HitRate,3,0.8977777777777778,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,MRR,3,0.8655555555555555,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,nDCG,3,0.8738351240238107,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,HitRate,5,0.9266666666666666,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,MRR,5,0.8718888888888889,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,nDCG,5,0.8854978023532402,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,HitRate,10,0.9488888888888889,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,MRR,10,0.874789241622575,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Doc,nDCG,10,0.8926192141744393,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,HitRate,1,0.46444444444444444,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,MRR,1,0.46444444444444444,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,nDCG,1,0.46444444444444444,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,HitRate,3,0.58,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,MRR,3,0.517037037037037,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,nDCG,3,0.533278512523812,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,HitRate,5,0.6422222222222222,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,MRR,5,0.5312592592592592,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,nDCG,5,0.5589075316704537,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,HitRate,10,0.6822222222222222,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,MRR,10,0.5364770723104056,,,450
+RAG-1 (bge-m3),domain:sosyal-toplum,Exact,nDCG,10,0.5717298883544493,,,450
+RAG-1 (bge-m3),domain:tip,Doc,HitRate,1,0.934,,,500
+RAG-1 (bge-m3),domain:tip,Doc,MRR,1,0.934,,,500
+RAG-1 (bge-m3),domain:tip,Doc,nDCG,1,0.934,,,500
+RAG-1 (bge-m3),domain:tip,Doc,HitRate,3,0.97,,,500
+RAG-1 (bge-m3),domain:tip,Doc,MRR,3,0.9513333333333334,,,500
+RAG-1 (bge-m3),domain:tip,Doc,nDCG,3,0.9561897521142867,,,500
+RAG-1 (bge-m3),domain:tip,Doc,HitRate,5,0.984,,,500
+RAG-1 (bge-m3),domain:tip,Doc,MRR,5,0.9544333333333332,,,500
+RAG-1 (bge-m3),domain:tip,Doc,nDCG,5,0.9618686339206033,,,500
+RAG-1 (bge-m3),domain:tip,Doc,HitRate,10,0.992,,,500
+RAG-1 (bge-m3),domain:tip,Doc,MRR,10,0.9556333333333333,,,500
+RAG-1 (bge-m3),domain:tip,Doc,nDCG,10,0.9645840066958873,,,500
+RAG-1 (bge-m3),domain:tip,Exact,HitRate,1,0.566,,,500
+RAG-1 (bge-m3),domain:tip,Exact,MRR,1,0.566,,,500
+RAG-1 (bge-m3),domain:tip,Exact,nDCG,1,0.566,,,500
+RAG-1 (bge-m3),domain:tip,Exact,HitRate,3,0.708,,,500
+RAG-1 (bge-m3),domain:tip,Exact,MRR,3,0.631,,,500
+RAG-1 (bge-m3),domain:tip,Exact,nDCG,3,0.6508785538785746,,,500
+RAG-1 (bge-m3),domain:tip,Exact,HitRate,5,0.752,,,500
+RAG-1 (bge-m3),domain:tip,Exact,MRR,5,0.6411999999999999,,,500
+RAG-1 (bge-m3),domain:tip,Exact,nDCG,5,0.6691271424203822,,,500
+RAG-1 (bge-m3),domain:tip,Exact,HitRate,10,0.782,,,500
+RAG-1 (bge-m3),domain:tip,Exact,MRR,10,0.6453261904761906,,,500
+RAG-1 (bge-m3),domain:tip,Exact,nDCG,10,0.678949249990956,,,500
+RAG-2 (multilingual-e5-large),all,Doc,HitRate,1,0.9061913696060038,0.893515478424015,0.9188555347091932,2132
+RAG-2 (multilingual-e5-large),all,Doc,MRR,1,0.9061913696060038,0.893515478424015,0.9188555347091932,2132
+RAG-2 (multilingual-e5-large),all,Doc,nDCG,1,0.9061913696060038,0.893515478424015,0.9188555347091932,2132
+RAG-2 (multilingual-e5-large),all,Doc,HitRate,3,0.9620075046904315,0.9535647279549718,0.9695121951219512,2132
+RAG-2 (multilingual-e5-large),all,Doc,MRR,3,0.9319887429643527,0.9222111475922451,0.9408243433395873,2132
+RAG-2 (multilingual-e5-large),all,Doc,nDCG,3,0.9397493139439842,0.9306173688968283,0.947997987486893,2132
+RAG-2 (multilingual-e5-large),all,Doc,HitRate,5,0.974202626641651,0.9671669793621013,0.9803001876172608,2132
+RAG-2 (multilingual-e5-large),all,Doc,MRR,5,0.9348264540337711,0.9257926829268294,0.9431599828017511,2132
+RAG-2 (multilingual-e5-large),all,Doc,nDCG,5,0.9448164700191991,0.9367531474995974,0.9522492834626646,2132
+RAG-2 (multilingual-e5-large),all,Doc,HitRate,10,0.9821763602251408,0.976078799249531,0.9873358348968105,2132
+RAG-2 (multilingual-e5-large),all,Doc,MRR,10,0.9358183313975996,0.9269723869457102,0.9440506017525835,2132
+RAG-2 (multilingual-e5-large),all,Doc,nDCG,10,0.9473231063357362,0.9397190402262543,0.9544544851021033,2132
+RAG-2 (multilingual-e5-large),all,Exact,HitRate,1,0.3949343339587242,0.37476547842401503,0.4155722326454034,2132
+RAG-2 (multilingual-e5-large),all,Exact,MRR,1,0.3949343339587242,0.37476547842401503,0.4155722326454034,2132
+RAG-2 (multilingual-e5-large),all,Exact,nDCG,1,0.3949343339587242,0.37476547842401503,0.4155722326454034,2132
+RAG-2 (multilingual-e5-large),all,Exact,HitRate,3,0.5117260787992496,0.48966932457786116,0.5337711069418386,2132
+RAG-2 (multilingual-e5-large),all,Exact,MRR,3,0.4463727329580989,0.42682731394621637,0.4665435428392745,2132
+RAG-2 (multilingual-e5-large),all,Exact,nDCG,3,0.4631560790672764,0.4435523672264495,0.48282286002173763,2132
+RAG-2 (multilingual-e5-large),all,Exact,HitRate,5,0.5426829268292683,0.5215759849906192,0.5633208255159474,2132
+RAG-2 (multilingual-e5-large),all,Exact,MRR,5,0.45350218886804256,0.4342297920575359,0.4734842088805504,2132
+RAG-2 (multilingual-e5-large),all,Exact,nDCG,5,0.47595403183980634,0.4567274150671773,0.4956405160626103,2132
+RAG-2 (multilingual-e5-large),all,Exact,HitRate,10,0.5670731707317073,0.5464352720450282,0.5881801125703565,2132
+RAG-2 (multilingual-e5-large),all,Exact,MRR,10,0.45697459721849965,0.43824786790106907,0.47707272867714945,2132
+RAG-2 (multilingual-e5-large),all,Exact,nDCG,10,0.4840588650423484,0.4655184422152778,0.503676233356345,2132
+RAG-2 (multilingual-e5-large),standalone,Doc,HitRate,1,0.9118773946360154,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,MRR,1,0.9118773946360154,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,nDCG,1,0.9118773946360154,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,HitRate,3,0.9688013136288999,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,MRR,3,0.938058748403576,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,nDCG,3,0.9460007939420608,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,HitRate,5,0.9813902572523262,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,MRR,5,0.9409870461594599,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,nDCG,5,0.9512306630329077,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,HitRate,10,0.9879584017515052,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,MRR,10,0.9418100190267678,,,1827
+RAG-2 (multilingual-e5-large),standalone,Doc,nDCG,10,0.9533017202070144,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,HitRate,1,0.39846743295019155,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,MRR,1,0.39846743295019155,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,nDCG,1,0.39846743295019155,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,HitRate,3,0.5090311986863711,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,MRR,3,0.44708994708994704,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,nDCG,3,0.4629939453807981,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,HitRate,5,0.5380405035577449,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,MRR,5,0.4537949279328589,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,nDCG,5,0.4750078384082271,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,HitRate,10,0.5582922824302134,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,MRR,10,0.45674429414166684,,,1827
+RAG-2 (multilingual-e5-large),standalone,Exact,nDCG,10,0.48180318389265875,,,1827
+RAG-2 (multilingual-e5-large),answerable,Doc,HitRate,1,0.9150363331470095,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,MRR,1,0.9150363331470095,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,nDCG,1,0.9150363331470095,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,HitRate,3,0.9636668529904975,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,MRR,3,0.9373951928451649,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,nDCG,3,0.9441818690529437,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,HitRate,5,0.9742873113471213,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,MRR,5,0.9398826159865846,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,nDCG,5,0.9486088741386683,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,HitRate,10,0.9826718837339296,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,MRR,10,0.9409149387349499,,,1789
+RAG-2 (multilingual-e5-large),answerable,Doc,nDCG,10,0.9512334411687061,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,HitRate,1,0.4695360536612633,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,MRR,1,0.4695360536612633,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,nDCG,1,0.4695360536612633,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,HitRate,3,0.6081609837898267,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,MRR,3,0.5306502701695547,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,nDCG,3,0.5505582786872182,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,HitRate,5,0.6444941307993293,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,MRR,5,0.539034842556363,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,nDCG,5,0.5655937076999622,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,HitRate,10,0.6724427054220234,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,MRR,10,0.5430310450992396,,,1789
+RAG-2 (multilingual-e5-large),answerable,Exact,nDCG,10,0.5748978670397177,,,1789
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,HitRate,1,0.8979166666666667,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,MRR,1,0.8979166666666667,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,nDCG,1,0.8979166666666667,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,HitRate,3,0.9854166666666667,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,MRR,3,0.9381944444444446,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,nDCG,3,0.9503953169047639,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,HitRate,5,0.99375,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,MRR,5,0.9400694444444445,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,nDCG,5,0.9538016892602136,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,HitRate,10,0.99375,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,MRR,10,0.9400694444444445,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Doc,nDCG,10,0.9538016892602136,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,HitRate,1,0.3416666666666667,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,MRR,1,0.3416666666666667,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,nDCG,1,0.3416666666666667,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,HitRate,3,0.44166666666666665,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,MRR,3,0.3854166666666667,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,nDCG,3,0.39984977626488283,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,HitRate,5,0.47708333333333336,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,MRR,5,0.3939583333333333,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,nDCG,5,0.41482900592057265,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,HitRate,10,0.5020833333333333,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,MRR,10,0.3975066137566137,,,480
+RAG-2 (multilingual-e5-large),domain:matematik-fizik,Exact,nDCG,10,0.4231261314054572,,,480
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,HitRate,1,0.9006622516556292,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,MRR,1,0.9006622516556292,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,nDCG,1,0.9006622516556292,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,HitRate,3,0.9668874172185431,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,MRR,3,0.9310154525386314,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,nDCG,3,0.940277967892622,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,HitRate,5,0.9834437086092715,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,MRR,5,0.9346578366445916,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,nDCG,5,0.9469730392100073,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,HitRate,10,0.9933774834437086,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,MRR,10,0.9359547461368652,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Doc,nDCG,10,0.9501542871908408,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,HitRate,1,0.38741721854304634,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,MRR,1,0.38741721854304634,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,nDCG,1,0.38741721854304634,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,HitRate,3,0.5662251655629139,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,MRR,3,0.4696467991169978,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,nDCG,3,0.4945964234981119,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,HitRate,5,0.6158940397350994,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,MRR,5,0.4809050772626931,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,nDCG,5,0.5149718609657573,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,HitRate,10,0.6456953642384106,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,MRR,10,0.4848733312309471,,,302
+RAG-2 (multilingual-e5-large),domain:ml-ai,Exact,nDCG,10,0.5246065205883409,,,302
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,HitRate,1,0.955,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,MRR,1,0.955,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,nDCG,1,0.955,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,HitRate,3,0.9725,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,MRR,3,0.9633333333333333,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,nDCG,3,0.9657139463035719,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,HitRate,5,0.98,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,MRR,5,0.9650833333333333,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,nDCG,5,0.9688344611120252,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,HitRate,10,0.99,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,MRR,10,0.9664474206349206,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Doc,nDCG,10,0.9720995495942529,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,HitRate,1,0.155,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,MRR,1,0.155,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,nDCG,1,0.155,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,HitRate,3,0.1775,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,MRR,3,0.16458333333333333,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,nDCG,3,0.1678866219196432,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,HitRate,5,0.1825,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,MRR,5,0.16558333333333333,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,nDCG,5,0.16982088595581593,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,HitRate,10,0.1875,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,MRR,10,0.1661904761904762,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-bilimler,Exact,nDCG,10,0.17137688135494397,,,400
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,HitRate,1,0.84,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,MRR,1,0.84,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,nDCG,1,0.84,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,HitRate,3,0.9133333333333333,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,MRR,3,0.8729629629629629,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,nDCG,3,0.8833586318492078,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,HitRate,5,0.9311111111111111,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,MRR,5,0.877074074074074,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,nDCG,5,0.8907229456538092,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,HitRate,10,0.9511111111111111,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,MRR,10,0.8794435626102293,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Doc,nDCG,10,0.8968926042051207,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,HitRate,1,0.4866666666666667,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,MRR,1,0.4866666666666667,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,nDCG,1,0.4866666666666667,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,HitRate,3,0.6133333333333333,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,MRR,3,0.5407407407407407,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,nDCG,3,0.5593105602539703,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,HitRate,5,0.6577777777777778,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,MRR,5,0.5506296296296296,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,nDCG,5,0.5773804933700604,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,HitRate,10,0.6911111111111111,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,MRR,10,0.5553386243386244,,,450
+RAG-2 (multilingual-e5-large),domain:sosyal-toplum,Exact,nDCG,10,0.5884224028888373,,,450
+RAG-2 (multilingual-e5-large),domain:tip,Doc,HitRate,1,0.938,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,MRR,1,0.938,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,nDCG,1,0.938,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,HitRate,3,0.972,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,MRR,3,0.9546666666666667,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,nDCG,3,0.9591897521142867,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,HitRate,5,0.984,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,MRR,5,0.9576666666666667,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,nDCG,5,0.9643578708111673,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,HitRate,10,0.986,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,MRR,10,0.9578888888888889,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Doc,nDCG,10,0.9649599308024953,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,HitRate,1,0.56,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,MRR,1,0.56,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,nDCG,1,0.56,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,HitRate,3,0.722,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,MRR,3,0.6313333333333333,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,nDCG,3,0.6546166943714316,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,HitRate,5,0.746,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,MRR,5,0.6370333333333333,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,nDCG,5,0.6646899892601599,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,HitRate,10,0.774,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,MRR,10,0.6413126984126984,,,500
+RAG-2 (multilingual-e5-large),domain:tip,Exact,nDCG,10,0.6742819082720681,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,HitRate,1,0.6815196998123827,0.6608818011257036,0.7021575984990619,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,MRR,1,0.6815196998123827,0.6608818011257036,0.7021575984990619,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,nDCG,1,0.6815196998123827,0.6608818011257036,0.7021575984990619,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,HitRate,3,0.8278611632270169,0.8114446529080676,0.8442776735459663,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,MRR,3,0.7473420888055035,0.7301418855534708,0.7650191525953721,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,nDCG,3,0.7680781830574943,0.7511307951137878,0.7850077817591241,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,HitRate,5,0.8719512195121951,0.8578799249530957,0.8860225140712945,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,MRR,5,0.757379612257661,0.7416764383989993,0.7740814571607255,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,nDCG,5,0.7862034170742237,0.7716160623004105,0.8014623249748557,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,HitRate,10,0.9151031894934334,0.9029080675422139,0.9268409943714823,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,MRR,10,0.7631869993150482,0.7477297008547008,0.7796154637198844,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Doc,nDCG,10,0.800206826227664,0.78633362410738,0.8146952498207902,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,HitRate,1,0.17917448405253283,0.16180816135084428,0.1951219512195122,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,MRR,1,0.17917448405253283,0.16180816135084428,0.1951219512195122,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,nDCG,1,0.17917448405253283,0.16180816135084428,0.1951219512195122,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,HitRate,3,0.26454033771106944,0.24671669793621012,0.281437617260788,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,MRR,3,0.21607254534083803,0.2000410412757974,0.23170731707317072,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,nDCG,3,0.22848987494639653,0.21244823209993272,0.2442785727055848,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,HitRate,5,0.30393996247654786,0.2847091932457786,0.3227134146341463,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,MRR,5,0.22500781738586617,0.2092991713570982,0.24043112883051904,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,nDCG,5,0.2446567157510165,0.228745807642689,0.26061266666860644,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,HitRate,10,0.3550656660412758,0.3353658536585366,0.37477720450281427,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,MRR,10,0.23172499925548706,0.21591678858066052,0.24703526571666817,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),all,Exact,nDCG,10,0.26108114773503915,0.24533729842149044,0.2767775638121539,2132
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,HitRate,1,0.6896551724137931,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,MRR,1,0.6896551724137931,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,nDCG,1,0.6896551724137931,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,HitRate,3,0.8385331143951834,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,MRR,3,0.756796205072067,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,nDCG,3,0.777853592055676,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,HitRate,5,0.8806787082649151,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,MRR,5,0.7664294836708628,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,nDCG,5,0.7952131493594357,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,HitRate,10,0.9222769567597153,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,MRR,10,0.7720065420804337,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Doc,nDCG,10,0.8086902997396181,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,HitRate,1,0.17898193760262726,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,MRR,1,0.17898193760262726,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,nDCG,1,0.17898193760262726,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,HitRate,3,0.2654625068418172,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,MRR,3,0.21629264732713008,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,nDCG,3,0.2288869551626413,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,HitRate,5,0.30268199233716475,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,MRR,5,0.2248038679073162,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,nDCG,5,0.2442208999763599,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,HitRate,10,0.3519430760810071,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,MRR,10,0.23119282195636875,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),standalone,Exact,nDCG,10,0.259963056109398,,,1827
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,HitRate,1,0.69927333705981,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,MRR,1,0.69927333705981,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,nDCG,1,0.69927333705981,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,HitRate,3,0.835103409726104,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,MRR,3,0.7607602012297373,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,nDCG,3,0.7799227373512765,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,HitRate,5,0.8775852431525992,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,MRR,5,0.770374510899944,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,nDCG,5,0.7973368029652392,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,HitRate,10,0.9189491335941867,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,MRR,10,0.7759063323484787,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Doc,nDCG,10,0.8107242360658816,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,HitRate,1,0.213527110117384,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,MRR,1,0.213527110117384,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,nDCG,1,0.213527110117384,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,HitRate,3,0.31525992174399103,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,MRR,3,0.25749953419042293,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,nDCG,3,0.27229760390481694,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,HitRate,5,0.3616545556176635,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,MRR,5,0.268008198248556,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,nDCG,5,0.2913233322655639,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,HitRate,10,0.42202347680268304,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,MRR,10,0.27595734958786944,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),answerable,Exact,nDCG,10,0.3107351959679777,,,1789
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,HitRate,1,0.6541666666666667,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,MRR,1,0.6541666666666667,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,nDCG,1,0.6541666666666667,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,HitRate,3,0.8375,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,MRR,3,0.7371527777777779,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,nDCG,3,0.7630178634895872,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,HitRate,5,0.8854166666666666,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,MRR,5,0.7486111111111111,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,nDCG,5,0.7831979511593659,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,HitRate,10,0.9291666666666667,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,MRR,10,0.7544626322751322,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Doc,nDCG,10,0.7973546570568945,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,HitRate,1,0.15416666666666667,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,MRR,1,0.15416666666666667,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,nDCG,1,0.15416666666666667,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,HitRate,3,0.22291666666666668,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,MRR,3,0.18229166666666666,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,nDCG,3,0.19263322146577475,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,HitRate,5,0.2625,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,MRR,5,0.1915625,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,nDCG,5,0.20913303833736088,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,HitRate,10,0.29375,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,MRR,10,0.19589947089947088,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:matematik-fizik,Exact,nDCG,10,0.21939755472682457,,,480
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,HitRate,1,0.5662251655629139,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,MRR,1,0.5662251655629139,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,nDCG,1,0.5662251655629139,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,HitRate,3,0.7450331125827815,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,MRR,3,0.6479028697571744,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,nDCG,3,0.6729708282876103,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,HitRate,5,0.8079470198675497,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,MRR,5,0.6619757174392936,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,nDCG,5,0.6986152557545173,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,HitRate,10,0.890728476821192,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,MRR,10,0.6733075791022811,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Doc,nDCG,10,0.7256746027120938,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,HitRate,1,0.15894039735099338,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,MRR,1,0.15894039735099338,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,nDCG,1,0.15894039735099338,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,HitRate,3,0.2251655629139073,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,MRR,3,0.18984547461368653,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,nDCG,3,0.19898965581835537,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,HitRate,5,0.271523178807947,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,MRR,5,0.20011037527593817,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,nDCG,5,0.2177939002101325,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,HitRate,10,0.33112582781456956,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,MRR,10,0.20814674655734258,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:ml-ai,Exact,nDCG,10,0.2371498049991987,,,302
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,HitRate,1,0.7425,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,MRR,1,0.7425,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,nDCG,1,0.7425,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,HitRate,3,0.8675,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,MRR,3,0.7975,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,nDCG,3,0.8154743802857166,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,HitRate,5,0.91,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,MRR,5,0.807,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,nDCG,5,0.8327920996099616,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,HitRate,10,0.9375,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,MRR,10,0.8108710317460317,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Doc,nDCG,10,0.8418831592101884,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,HitRate,1,0.0625,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,MRR,1,0.0625,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,nDCG,1,0.0625,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,HitRate,3,0.085,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,MRR,3,0.07208333333333333,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,nDCG,3,0.07538662191964322,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,HitRate,5,0.0975,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,MRR,5,0.07508333333333334,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,nDCG,5,0.08066051951846351,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,HitRate,10,0.12,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,MRR,10,0.07814087301587301,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-bilimler,Exact,nDCG,10,0.08799411689288693,,,400
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,HitRate,1,0.6155555555555555,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,MRR,1,0.6155555555555555,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,nDCG,1,0.6155555555555555,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,HitRate,3,0.7733333333333333,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,MRR,3,0.6855555555555556,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,nDCG,3,0.7081193298174634,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,HitRate,5,0.82,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,MRR,5,0.6957777777777777,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,nDCG,5,0.7269515497255438,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,HitRate,10,0.8688888888888889,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,MRR,10,0.7022469135802469,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Doc,nDCG,10,0.7427100742822503,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,HitRate,1,0.19555555555555557,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,MRR,1,0.19555555555555557,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,nDCG,1,0.19555555555555557,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,HitRate,3,0.29555555555555557,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,MRR,3,0.23851851851851846,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,nDCG,3,0.25312038576190643,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,HitRate,5,0.34444444444444444,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,MRR,5,0.24918518518518518,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,nDCG,5,0.2728122785749525,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,HitRate,10,0.41555555555555557,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,MRR,10,0.25777160493827156,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:sosyal-toplum,Exact,nDCG,10,0.2948986450479884,,,450
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,HitRate,1,0.788,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,MRR,1,0.788,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,nDCG,1,0.788,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,HitRate,3,0.886,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,MRR,3,0.8326666666666667,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,nDCG,3,0.846426942257145,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,HitRate,5,0.914,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,MRR,5,0.8391666666666666,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,nDCG,5,0.8580476483748114,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,HitRate,10,0.94,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,MRR,10,0.8425484126984126,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Doc,nDCG,10,0.8663683819998598,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,HitRate,1,0.294,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,MRR,1,0.294,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,nDCG,1,0.294,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,HitRate,3,0.444,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,MRR,3,0.35933333333333334,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,nDCG,3,0.3810455373285741,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,HitRate,5,0.492,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,MRR,5,0.3703333333333333,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,nDCG,5,0.40084153709931997,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,HitRate,10,0.562,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,MRR,10,0.37978412698412695,,,500
+RAG-3 (paraphrase-multilingual-mpnet-base-v2),domain:tip,Exact,nDCG,10,0.42358580512744026,,,500
+RAG-4 (256/50),all,Doc,HitRate,1,0.9197936210131332,0.9080675422138836,0.9310506566604128,2132
+RAG-4 (256/50),all,Doc,MRR,1,0.9197936210131332,0.9080675422138836,0.9310506566604128,2132
+RAG-4 (256/50),all,Doc,nDCG,1,0.9197936210131332,0.9080675422138836,0.9310506566604128,2132
+RAG-4 (256/50),all,Doc,HitRate,3,0.9671669793621013,0.9596622889305816,0.974202626641651,2132
+RAG-4 (256/50),all,Doc,MRR,3,0.941447779862414,0.9323737492182613,0.9495798155096936,2132
+RAG-4 (256/50),all,Doc,nDCG,3,0.948086178010253,0.9398497533765674,0.9558256681487881,2132
+RAG-4 (256/50),all,Doc,HitRate,5,0.9765478424015009,0.9699812382739212,0.9826454033771107,2132
+RAG-4 (256/50),all,Doc,MRR,5,0.9435819262038775,0.9349290572232646,0.9514550109443402,2132
+RAG-4 (256/50),all,Doc,nDCG,5,0.9519412987437981,0.9443280653358438,0.9589962811482997,2132
+RAG-4 (256/50),all,Doc,HitRate,10,0.9849906191369606,0.9798311444652908,0.9896810506566605,2132
+RAG-4 (256/50),all,Doc,MRR,10,0.944793993269603,0.9361881077086869,0.9524485634622829,2132
+RAG-4 (256/50),all,Doc,nDCG,10,0.9547567967839731,0.9473506999841453,0.9615103266468825,2132
+RAG-4 (256/50),all,Exact,HitRate,1,0.30112570356472795,0.28236397748592873,0.32176360225140715,2132
+RAG-4 (256/50),all,Exact,MRR,1,0.30112570356472795,0.28236397748592873,0.32176360225140715,2132
+RAG-4 (256/50),all,Exact,nDCG,1,0.30112570356472795,0.28236397748592873,0.32176360225140715,2132
+RAG-4 (256/50),all,Exact,HitRate,3,0.3893058161350844,0.369125234521576,0.4104127579737336,2132
+RAG-4 (256/50),all,Exact,MRR,3,0.33997811131957467,0.321994215134459,0.3598362257661038,2132
+RAG-4 (256/50),all,Exact,nDCG,3,0.35264657607042516,0.3345463275499632,0.37240961358110425,2132
+RAG-4 (256/50),all,Exact,HitRate,5,0.4197936210131332,0.3986632270168855,0.44090056285178236,2132
+RAG-4 (256/50),all,Exact,MRR,5,0.3468964978111319,0.3291809333958724,0.3665277126328955,2132
+RAG-4 (256/50),all,Exact,nDCG,5,0.3651603020317783,0.34722400783324725,0.384834168158093,2132
+RAG-4 (256/50),all,Exact,HitRate,10,0.4399624765478424,0.41885553470919323,0.4606003752345216,2132
+RAG-4 (256/50),all,Exact,MRR,10,0.34960633878316805,0.3321663465261026,0.36929504396348906,2132
+RAG-4 (256/50),all,Exact,nDCG,10,0.37170031323936603,0.35393629915633007,0.3915738635958681,2132
+RAG-4 (256/50),standalone,Doc,HitRate,1,0.9239189928845101,,,1827
+RAG-4 (256/50),standalone,Doc,MRR,1,0.9239189928845101,,,1827
+RAG-4 (256/50),standalone,Doc,nDCG,1,0.9239189928845101,,,1827
+RAG-4 (256/50),standalone,Doc,HitRate,3,0.9726327312534209,,,1827
+RAG-4 (256/50),standalone,Doc,MRR,3,0.9462689290275497,,,1827
+RAG-4 (256/50),standalone,Doc,nDCG,3,0.9530773363378695,,,1827
+RAG-4 (256/50),standalone,Doc,HitRate,5,0.9792008757525998,,,1827
+RAG-4 (256/50),standalone,Doc,MRR,5,0.9477193942711183,,,1827
+RAG-4 (256/50),standalone,Doc,nDCG,5,0.9557381751123681,,,1827
+RAG-4 (256/50),standalone,Doc,HitRate,10,0.9863163656267104,,,1827
+RAG-4 (256/50),standalone,Doc,MRR,10,0.9487341552201979,,,1827
+RAG-4 (256/50),standalone,Doc,nDCG,10,0.9581040923455953,,,1827
+RAG-4 (256/50),standalone,Exact,HitRate,1,0.2939244663382594,,,1827
+RAG-4 (256/50),standalone,Exact,MRR,1,0.2939244663382594,,,1827
+RAG-4 (256/50),standalone,Exact,nDCG,1,0.2939244663382594,,,1827
+RAG-4 (256/50),standalone,Exact,HitRate,3,0.3738368910782704,,,1827
+RAG-4 (256/50),standalone,Exact,MRR,3,0.32922824302134646,,,1827
+RAG-4 (256/50),standalone,Exact,nDCG,3,0.34068873923880044,,,1827
+RAG-4 (256/50),standalone,Exact,HitRate,5,0.40229885057471265,,,1827
+RAG-4 (256/50),standalone,Exact,MRR,5,0.33571428571428574,,,1827
+RAG-4 (256/50),standalone,Exact,nDCG,5,0.35239494326207516,,,1827
+RAG-4 (256/50),standalone,Exact,HitRate,10,0.42090859332238645,,,1827
+RAG-4 (256/50),standalone,Exact,MRR,10,0.33815062423436804,,,1827
+RAG-4 (256/50),standalone,Exact,nDCG,10,0.3583659011415574,,,1827
+RAG-4 (256/50),answerable,Doc,HitRate,1,0.9278926774734488,,,1789
+RAG-4 (256/50),answerable,Doc,MRR,1,0.9278926774734488,,,1789
+RAG-4 (256/50),answerable,Doc,nDCG,1,0.9278926774734488,,,1789
+RAG-4 (256/50),answerable,Doc,HitRate,3,0.9703745108999441,,,1789
+RAG-4 (256/50),answerable,Doc,MRR,3,0.9473635177939259,,,1789
+RAG-4 (256/50),answerable,Doc,nDCG,3,0.9533051961730427,,,1789
+RAG-4 (256/50),answerable,Doc,HitRate,5,0.9787590832867524,,,1789
+RAG-4 (256/50),answerable,Doc,MRR,5,0.9492640208682689,,,1789
+RAG-4 (256/50),answerable,Doc,nDCG,5,0.9567447613576311,,,1789
+RAG-4 (256/50),answerable,Doc,HitRate,10,0.9860257126886529,,,1789
+RAG-4 (256/50),answerable,Doc,MRR,10,0.9503342738250509,,,1789
+RAG-4 (256/50),answerable,Doc,nDCG,10,0.9591956656330192,,,1789
+RAG-4 (256/50),answerable,Exact,HitRate,1,0.3583007266629402,,,1789
+RAG-4 (256/50),answerable,Exact,MRR,1,0.3583007266629402,,,1789
+RAG-4 (256/50),answerable,Exact,nDCG,1,0.3583007266629402,,,1789
+RAG-4 (256/50),answerable,Exact,HitRate,3,0.46282839575181667,,,1789
+RAG-4 (256/50),answerable,Exact,MRR,3,0.4044158747903857,,,1789
+RAG-4 (256/50),answerable,Exact,nDCG,3,0.41942006717839375,,,1789
+RAG-4 (256/50),answerable,Exact,HitRate,5,0.4986025712688653,,,1789
+RAG-4 (256/50),answerable,Exact,MRR,5,0.4125489100055897,,,1789
+RAG-4 (256/50),answerable,Exact,nDCG,5,0.4341167753630614,,,1789
+RAG-4 (256/50),answerable,Exact,HitRate,10,0.5226383454443824,,,1789
+RAG-4 (256/50),answerable,Exact,MRR,10,0.41577830125901677,,,1789
+RAG-4 (256/50),answerable,Exact,nDCG,10,0.4419106847507512,,,1789
+RAG-4 (256/50),domain:matematik-fizik,Doc,HitRate,1,0.925,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,MRR,1,0.925,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,nDCG,1,0.925,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,HitRate,3,0.9895833333333334,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,MRR,3,0.9555555555555556,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,nDCG,3,0.9643836949851206,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,HitRate,5,0.9979166666666667,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,MRR,5,0.9574305555555556,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,nDCG,5,0.9677900673405705,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,HitRate,10,0.9979166666666667,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,MRR,10,0.9574305555555556,,,480
+RAG-4 (256/50),domain:matematik-fizik,Doc,nDCG,10,0.9677900673405705,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,HitRate,1,0.26875,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,MRR,1,0.26875,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,nDCG,1,0.26875,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,HitRate,3,0.3458333333333333,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,MRR,3,0.3020833333333333,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,nDCG,3,0.3132926137053585,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,HitRate,5,0.38125,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,MRR,5,0.30979166666666663,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,nDCG,5,0.3275414475137342,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,HitRate,10,0.3958333333333333,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,MRR,10,0.3118080357142857,,,480
+RAG-4 (256/50),domain:matematik-fizik,Exact,nDCG,10,0.3323238421472318,,,480
+RAG-4 (256/50),domain:ml-ai,Doc,HitRate,1,0.9072847682119205,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,MRR,1,0.9072847682119205,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,nDCG,1,0.9072847682119205,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,HitRate,3,0.9768211920529801,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,MRR,3,0.9403973509933775,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,nDCG,3,0.9498567402790936,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,HitRate,5,0.9834437086092715,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,MRR,5,0.9418874172185432,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,nDCG,5,0.9525637911575966,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,HitRate,10,0.9933774834437086,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,MRR,10,0.9432434563229265,,,302
+RAG-4 (256/50),domain:ml-ai,Doc,nDCG,10,0.9558042062130907,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,HitRate,1,0.3443708609271523,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,MRR,1,0.3443708609271523,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,nDCG,1,0.3443708609271523,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,HitRate,3,0.45695364238410596,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,MRR,3,0.3934878587196468,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,nDCG,3,0.4097666384933795,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,HitRate,5,0.5,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,MRR,5,0.4032560706401766,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,nDCG,5,0.42743502508252196,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,HitRate,10,0.543046357615894,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,MRR,10,0.40897061915273836,,,302
+RAG-4 (256/50),domain:ml-ai,Exact,nDCG,10,0.4413264351343265,,,302
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,HitRate,1,0.9425,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,MRR,1,0.9425,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,nDCG,1,0.9425,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,HitRate,3,0.98,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,MRR,3,0.9591666666666667,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,nDCG,3,0.9645232438392864,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,HitRate,5,0.99,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,MRR,5,0.9612916666666667,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,nDCG,5,0.968501331288729,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,HitRate,10,0.995,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,MRR,10,0.962125,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Doc,nDCG,10,0.9702823672242691,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,HitRate,1,0.0225,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,MRR,1,0.0225,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,nDCG,1,0.0225,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,HitRate,3,0.0275,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,MRR,3,0.025,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,nDCG,3,0.02565464876785729,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,HitRate,5,0.0275,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,MRR,5,0.025,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,nDCG,5,0.02565464876785729,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,HitRate,10,0.0325,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,MRR,10,0.025669642857142856,,,400
+RAG-4 (256/50),domain:sosyal-bilimler,Exact,nDCG,10,0.02727664429315494,,,400
+RAG-4 (256/50),domain:sosyal-toplum,Doc,HitRate,1,0.8555555555555555,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,MRR,1,0.8555555555555555,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,nDCG,1,0.8555555555555555,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,HitRate,3,0.9088888888888889,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,MRR,3,0.8788888888888889,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,nDCG,3,0.8865865473412708,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,HitRate,5,0.9244444444444444,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,MRR,5,0.8825555555555555,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,nDCG,5,0.8930911882409065,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,HitRate,10,0.9466666666666667,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,MRR,10,0.8855890652557319,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Doc,nDCG,10,0.9003486868923026,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,HitRate,1,0.35777777777777775,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,MRR,1,0.35777777777777775,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,nDCG,1,0.35777777777777775,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,HitRate,3,0.5066666666666667,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,MRR,3,0.42444444444444446,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,nDCG,3,0.4456061525873045,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,HitRate,5,0.5466666666666666,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,MRR,5,0.4335555555555555,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,nDCG,5,0.46205412600643847,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,HitRate,10,0.5711111111111111,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,MRR,10,0.4366851851851852,,,450
+RAG-4 (256/50),domain:sosyal-toplum,Exact,nDCG,10,0.46982353896490286,,,450
+RAG-4 (256/50),domain:tip,Doc,HitRate,1,0.962,,,500
+RAG-4 (256/50),domain:tip,Doc,MRR,1,0.962,,,500
+RAG-4 (256/50),domain:tip,Doc,nDCG,1,0.962,,,500
+RAG-4 (256/50),domain:tip,Doc,HitRate,3,0.982,,,500
+RAG-4 (256/50),domain:tip,Doc,MRR,3,0.9706666666666668,,,500
+RAG-4 (256/50),domain:tip,Doc,nDCG,3,0.9735711570428576,,,500
+RAG-4 (256/50),domain:tip,Doc,HitRate,5,0.988,,,500
+RAG-4 (256/50),domain:tip,Doc,MRR,5,0.9720666666666666,,,500
+RAG-4 (256/50),domain:tip,Doc,nDCG,5,0.9760675688896201,,,500
+RAG-4 (256/50),domain:tip,Doc,HitRate,10,0.994,,,500
+RAG-4 (256/50),domain:tip,Doc,MRR,10,0.9730190476190476,,,500
+RAG-4 (256/50),domain:tip,Doc,nDCG,10,0.9781590643047189,,,500
+RAG-4 (256/50),domain:tip,Exact,HitRate,1,0.478,,,500
+RAG-4 (256/50),domain:tip,Exact,MRR,1,0.478,,,500
+RAG-4 (256/50),domain:tip,Exact,nDCG,1,0.478,,,500
+RAG-4 (256/50),domain:tip,Exact,HitRate,3,0.574,,,500
+RAG-4 (256/50),domain:tip,Exact,MRR,3,0.52,,,500
+RAG-4 (256/50),domain:tip,Exact,nDCG,3,0.5338557852142874,,,500
+RAG-4 (256/50),domain:tip,Exact,HitRate,5,0.608,,,500
+RAG-4 (256/50),domain:tip,Exact,MRR,5,0.528,,,500
+RAG-4 (256/50),domain:tip,Exact,nDCG,5,0.5480605506803943,,,500
+RAG-4 (256/50),domain:tip,Exact,HitRate,10,0.628,,,500
+RAG-4 (256/50),domain:tip,Exact,MRR,10,0.5308150793650793,,,500
+RAG-4 (256/50),domain:tip,Exact,nDCG,10,0.5546755798672444,,,500
+RAG-5 (1024/200),all,Doc,HitRate,1,0.8832082551594747,0.8686679174484052,0.8968105065666041,2132
+RAG-5 (1024/200),all,Doc,MRR,1,0.8832082551594747,0.8686679174484052,0.8968105065666041,2132
+RAG-5 (1024/200),all,Doc,nDCG,1,0.8832082551594747,0.8686679174484052,0.8968105065666041,2132
+RAG-5 (1024/200),all,Doc,HitRate,3,0.948874296435272,0.9394934333958724,0.9582551594746717,2132
+RAG-5 (1024/200),all,Doc,MRR,3,0.9133833646028767,0.902046200750469,0.9244078330206379,2132
+RAG-5 (1024/200),all,Doc,nDCG,3,0.9225509164533651,0.9117286908546236,0.9329208531593002,2132
+RAG-5 (1024/200),all,Doc,HitRate,5,0.9662288930581614,0.9577861163227017,0.9737335834896811,2132
+RAG-5 (1024/200),all,Doc,MRR,5,0.9174405878674171,0.9069306988742963,0.9278381019387116,2132
+RAG-5 (1024/200),all,Doc,nDCG,5,0.929778471630968,0.9203907472967008,0.9392230971912908,2132
+RAG-5 (1024/200),all,Doc,HitRate,10,0.9765478424015009,0.9699812382739212,0.9826454033771107,2132
+RAG-5 (1024/200),all,Doc,MRR,10,0.9188698665832812,0.9083903723309211,0.9290020734685369,2132
+RAG-5 (1024/200),all,Doc,nDCG,10,0.9331687579742484,0.9239874785911366,0.9420477617696766,2132
+RAG-5 (1024/200),all,Exact,HitRate,1,0.45637898686679174,0.4366674484052533,0.47842401500938087,2132
+RAG-5 (1024/200),all,Exact,MRR,1,0.45637898686679174,0.4366674484052533,0.47842401500938087,2132
+RAG-5 (1024/200),all,Exact,nDCG,1,0.45637898686679174,0.4366674484052533,0.47842401500938087,2132
+RAG-5 (1024/200),all,Exact,HitRate,3,0.5736397748592871,0.5525211069418386,0.5947584427767355,2132
+RAG-5 (1024/200),all,Exact,MRR,3,0.508364602876798,0.4888954033771106,0.5295516729205754,2132
+RAG-5 (1024/200),all,Exact,nDCG,3,0.525142312072838,0.5056846756743354,0.546121724563122,2132
+RAG-5 (1024/200),all,Exact,HitRate,5,0.6083489681050657,0.5876993433395872,0.6289985928705442,2132
+RAG-5 (1024/200),all,Exact,MRR,5,0.5162679799874922,0.49691936366479056,0.5368220372107567,2132
+RAG-5 (1024/200),all,Exact,nDCG,5,0.5394124253560223,0.5202073515572899,0.5603941588905427,2132
+RAG-5 (1024/200),all,Exact,HitRate,10,0.6336772983114447,0.6135084427767354,0.6538461538461539,2132
+RAG-5 (1024/200),all,Exact,MRR,10,0.5198075806307514,0.5006735515500759,0.5407381520072069,2132
+RAG-5 (1024/200),all,Exact,nDCG,10,0.5477620937356477,0.528914324587681,0.5681946060667867,2132
+RAG-5 (1024/200),standalone,Doc,HitRate,1,0.8910782703886152,,,1827
+RAG-5 (1024/200),standalone,Doc,MRR,1,0.8910782703886152,,,1827
+RAG-5 (1024/200),standalone,Doc,nDCG,1,0.8910782703886152,,,1827
+RAG-5 (1024/200),standalone,Doc,HitRate,3,0.9594964422550629,,,1827
+RAG-5 (1024/200),standalone,Doc,MRR,3,0.9224594052180259,,,1827
+RAG-5 (1024/200),standalone,Doc,nDCG,3,0.9320237530573164,,,1827
+RAG-5 (1024/200),standalone,Doc,HitRate,5,0.9748221127531472,,,1827
+RAG-5 (1024/200),standalone,Doc,MRR,5,0.9260992519613208,,,1827
+RAG-5 (1024/200),standalone,Doc,nDCG,5,0.9384562529862616,,,1827
+RAG-5 (1024/200),standalone,Doc,HitRate,10,0.9835796387520526,,,1827
+RAG-5 (1024/200),standalone,Doc,MRR,10,0.9273273038461872,,,1827
+RAG-5 (1024/200),standalone,Doc,nDCG,10,0.9413471647834794,,,1827
+RAG-5 (1024/200),standalone,Exact,HitRate,1,0.45648604269293924,,,1827
+RAG-5 (1024/200),standalone,Exact,MRR,1,0.45648604269293924,,,1827
+RAG-5 (1024/200),standalone,Exact,nDCG,1,0.45648604269293924,,,1827
+RAG-5 (1024/200),standalone,Exact,HitRate,3,0.5681444991789819,,,1827
+RAG-5 (1024/200),standalone,Exact,MRR,3,0.5062944718117132,,,1827
+RAG-5 (1024/200),standalone,Exact,nDCG,3,0.5222048746540017,,,1827
+RAG-5 (1024/200),standalone,Exact,HitRate,5,0.6004378762999453,,,1827
+RAG-5 (1024/200),standalone,Exact,MRR,5,0.5136562671045429,,,1827
+RAG-5 (1024/200),standalone,Exact,nDCG,5,0.5354892202503455,,,1827
+RAG-5 (1024/200),standalone,Exact,HitRate,10,0.6245210727969349,,,1827
+RAG-5 (1024/200),standalone,Exact,MRR,10,0.5170526320362117,,,1827
+RAG-5 (1024/200),standalone,Exact,nDCG,10,0.5434577437566442,,,1827
+RAG-5 (1024/200),answerable,Doc,HitRate,1,0.8943543879262158,,,1789
+RAG-5 (1024/200),answerable,Doc,MRR,1,0.8943543879262158,,,1789
+RAG-5 (1024/200),answerable,Doc,nDCG,1,0.8943543879262158,,,1789
+RAG-5 (1024/200),answerable,Doc,HitRate,3,0.9541643376187814,,,1789
+RAG-5 (1024/200),answerable,Doc,MRR,3,0.9216508291410472,,,1789
+RAG-5 (1024/200),answerable,Doc,nDCG,3,0.9300410567535747,,,1789
+RAG-5 (1024/200),answerable,Doc,HitRate,5,0.9686975964225825,,,1789
+RAG-5 (1024/200),answerable,Doc,MRR,5,0.9250605552450158,,,1789
+RAG-5 (1024/200),answerable,Doc,nDCG,5,0.936104220813495,,,1789
+RAG-5 (1024/200),answerable,Doc,HitRate,10,0.9782001117942984,,,1789
+RAG-5 (1024/200),answerable,Doc,MRR,10,0.926420719209987,,,1789
+RAG-5 (1024/200),answerable,Doc,nDCG,10,0.9392709584335812,,,1789
+RAG-5 (1024/200),answerable,Exact,HitRate,1,0.5438792621576299,,,1789
+RAG-5 (1024/200),answerable,Exact,MRR,1,0.5438792621576299,,,1789
+RAG-5 (1024/200),answerable,Exact,nDCG,1,0.5438792621576299,,,1789
+RAG-5 (1024/200),answerable,Exact,HitRate,3,0.6813862493012857,,,1789
+RAG-5 (1024/200),answerable,Exact,MRR,3,0.6048071548351034,,,1789
+RAG-5 (1024/200),answerable,Exact,nDCG,3,0.6244888876906518,,,1789
+RAG-5 (1024/200),answerable,Exact,HitRate,5,0.7216321967579653,,,1789
+RAG-5 (1024/200),answerable,Exact,MRR,5,0.6139742873113472,,,1789
+RAG-5 (1024/200),answerable,Exact,nDCG,5,0.641037994540535,,,1789
+RAG-5 (1024/200),answerable,Exact,HitRate,10,0.7490217998882057,,,1789
+RAG-5 (1024/200),answerable,Exact,MRR,10,0.6178393977303983,,,1789
+RAG-5 (1024/200),answerable,Exact,nDCG,10,0.6501049747793691,,,1789
+RAG-5 (1024/200),domain:matematik-fizik,Doc,HitRate,1,0.88125,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,MRR,1,0.88125,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,nDCG,1,0.88125,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,HitRate,3,0.96875,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,MRR,3,0.9222222222222222,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,nDCG,3,0.9342741908779783,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,HitRate,5,0.9833333333333333,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,MRR,5,0.9255555555555556,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,nDCG,5,0.9402809922404723,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,HitRate,10,0.9854166666666667,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,MRR,10,0.9257638888888888,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Doc,nDCG,10,0.9408832106286347,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,HitRate,1,0.425,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,MRR,1,0.425,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,nDCG,1,0.425,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,HitRate,3,0.5479166666666667,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,MRR,3,0.478125,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,nDCG,3,0.49600529453125214,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,HitRate,5,0.5833333333333334,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,MRR,5,0.48624999999999996,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,nDCG,5,0.5106193262632849,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,HitRate,10,0.6020833333333333,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,MRR,10,0.4889699074074075,,,480
+RAG-5 (1024/200),domain:matematik-fizik,Exact,nDCG,10,0.5168985464308673,,,480
+RAG-5 (1024/200),domain:ml-ai,Doc,HitRate,1,0.8675496688741722,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,MRR,1,0.8675496688741722,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,nDCG,1,0.8675496688741722,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,HitRate,3,0.9668874172185431,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,MRR,3,0.9128035320088299,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,nDCG,3,0.9267564721144771,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,HitRate,5,0.9801324503311258,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,MRR,5,0.9159492273730685,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,nDCG,5,0.9323156856292278,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,HitRate,10,0.9900662251655629,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,MRR,10,0.9173880479344055,,,302
+RAG-5 (1024/200),domain:ml-ai,Doc,nDCG,10,0.935643518070377,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,HitRate,1,0.47019867549668876,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,MRR,1,0.47019867549668876,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,nDCG,1,0.47019867549668876,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,HitRate,3,0.6158940397350994,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,MRR,3,0.5369757174392936,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,nDCG,3,0.5573532512180732,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,HitRate,5,0.6622516556291391,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,MRR,5,0.5475717439293598,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,nDCG,5,0.5764477191253394,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,HitRate,10,0.6821192052980133,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,MRR,10,0.5505242825607064,,,302
+RAG-5 (1024/200),domain:ml-ai,Exact,nDCG,10,0.5831674490973119,,,302
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,HitRate,1,0.92,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,MRR,1,0.92,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,nDCG,1,0.92,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,HitRate,3,0.95,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,MRR,3,0.9341666666666666,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,nDCG,3,0.9382732438392865,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,HitRate,5,0.975,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,MRR,5,0.9401666666666667,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,nDCG,5,0.9488210390369269,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,HitRate,10,0.985,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,MRR,10,0.9415902777777777,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Doc,nDCG,10,0.9521433121535915,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,HitRate,1,0.24,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,MRR,1,0.24,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,nDCG,1,0.24,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,HitRate,3,0.26,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,MRR,3,0.24958333333333332,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,nDCG,3,0.2522912706875005,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,HitRate,5,0.275,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,MRR,5,0.2530833333333333,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,nDCG,5,0.25853230030440716,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,HitRate,10,0.2825,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,MRR,10,0.2542738095238095,,,400
+RAG-5 (1024/200),domain:sosyal-bilimler,Exact,nDCG,10,0.26114666957328064,,,400
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,HitRate,1,0.8288888888888889,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,MRR,1,0.8288888888888889,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,nDCG,1,0.8288888888888889,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,HitRate,3,0.9022222222222223,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,MRR,3,0.862962962962963,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,nDCG,3,0.8731203857619064,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,HitRate,5,0.9244444444444444,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,MRR,5,0.8681851851851852,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,nDCG,5,0.8823988176023896,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,HitRate,10,0.9422222222222222,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,MRR,10,0.8705855379188713,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Doc,nDCG,10,0.8881768300833583,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,HitRate,1,0.52,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,MRR,1,0.52,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,nDCG,1,0.52,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,HitRate,3,0.6488888888888888,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,MRR,3,0.5792592592592591,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,nDCG,3,0.5972464647936537,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,HitRate,5,0.6844444444444444,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,MRR,5,0.5871481481481482,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,nDCG,5,0.6116829340639305,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,HitRate,10,0.7244444444444444,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,MRR,10,0.5924356261022928,,,450
+RAG-5 (1024/200),domain:sosyal-toplum,Exact,nDCG,10,0.6245712352611497,,,450
+RAG-5 (1024/200),domain:tip,Doc,HitRate,1,0.914,,,500
+RAG-5 (1024/200),domain:tip,Doc,MRR,1,0.914,,,500
+RAG-5 (1024/200),domain:tip,Doc,nDCG,1,0.914,,,500
+RAG-5 (1024/200),domain:tip,Doc,HitRate,3,0.96,,,500
+RAG-5 (1024/200),domain:tip,Doc,MRR,3,0.934,,,500
+RAG-5 (1024/200),domain:tip,Doc,nDCG,3,0.9406660331000009,,,500
+RAG-5 (1024/200),domain:tip,Doc,HitRate,5,0.972,,,500
+RAG-5 (1024/200),domain:tip,Doc,MRR,5,0.9367000000000001,,,500
+RAG-5 (1024/200),domain:tip,Doc,nDCG,5,0.9455712092918483,,,500
+RAG-5 (1024/200),domain:tip,Doc,HitRate,10,0.984,,,500
+RAG-5 (1024/200),domain:tip,Doc,MRR,10,0.9384261904761904,,,500
+RAG-5 (1024/200),domain:tip,Doc,nDCG,10,0.9495812200863026,,,500
+RAG-5 (1024/200),domain:tip,Exact,HitRate,1,0.594,,,500
+RAG-5 (1024/200),domain:tip,Exact,MRR,1,0.594,,,500
+RAG-5 (1024/200),domain:tip,Exact,nDCG,1,0.594,,,500
+RAG-5 (1024/200),domain:tip,Exact,HitRate,3,0.756,,,500
+RAG-5 (1024/200),domain:tip,Exact,MRR,3,0.6633333333333332,,,500
+RAG-5 (1024/200),domain:tip,Exact,nDCG,3,0.687045537328574,,,500
+RAG-5 (1024/200),domain:tip,Exact,HitRate,5,0.798,,,500
+RAG-5 (1024/200),domain:tip,Exact,MRR,5,0.6729333333333333,,,500
+RAG-5 (1024/200),domain:tip,Exact,nDCG,5,0.7043451252525574,,,500
+RAG-5 (1024/200),domain:tip,Exact,HitRate,10,0.834,,,500
+RAG-5 (1024/200),domain:tip,Exact,MRR,10,0.6779206349206349,,,500
+RAG-5 (1024/200),domain:tip,Exact,nDCG,10,0.7161703764667336,,,500
+RAG-6 (Header Based),all,Doc,HitRate,1,0.7926829268292683,0.774390243902439,0.8105065666041276,2132
+RAG-6 (Header Based),all,Doc,MRR,1,0.7926829268292683,0.774390243902439,0.8105065666041276,2132
+RAG-6 (Header Based),all,Doc,nDCG,1,0.7926829268292683,0.774390243902439,0.8105065666041276,2132
+RAG-6 (Header Based),all,Doc,HitRate,3,0.9029080675422139,0.8902321763602251,0.9160412757973734,2132
+RAG-6 (Header Based),all,Doc,MRR,3,0.8420888055034397,0.8270774702939336,0.8564767041901188,2132
+RAG-6 (Header Based),all,Doc,nDCG,3,0.8577441932826342,0.8437006895388324,0.871482629531713,2132
+RAG-6 (Header Based),all,Doc,HitRate,5,0.9272983114446529,0.9169793621013134,0.9376289868667917,2132
+RAG-6 (Header Based),all,Doc,MRR,5,0.847600062539087,0.8334410178236398,0.8615318167604753,2132
+RAG-6 (Header Based),all,Doc,nDCG,5,0.8677346188214922,0.8550221926123313,0.8803894454701896,2132
+RAG-6 (Header Based),all,Doc,HitRate,10,0.9582551594746717,0.949343339587242,0.9667096622889306,2132
+RAG-6 (Header Based),all,Doc,MRR,10,0.8517950206974597,0.8380653040218589,0.865041823014384,2132
+RAG-6 (Header Based),all,Doc,nDCG,10,0.8778105352652114,0.8659147542422438,0.8891441674301379,2132
+RAG-6 (Header Based),all,Exact,HitRate,1,0.40196998123827393,0.38133208255159473,0.42354596622889307,2132
+RAG-6 (Header Based),all,Exact,MRR,1,0.40196998123827393,0.38133208255159473,0.42354596622889307,2132
+RAG-6 (Header Based),all,Exact,nDCG,1,0.40196998123827393,0.38133208255159473,0.42354596622889307,2132
+RAG-6 (Header Based),all,Exact,HitRate,3,0.5318949343339587,0.5098499061913696,0.5548780487804879,2132
+RAG-6 (Header Based),all,Exact,MRR,3,0.4595059412132583,0.4394133051907442,0.4814141651031894,2132
+RAG-6 (Header Based),all,Exact,nDCG,3,0.4781093879690457,0.457679988891176,0.5004676599131461,2132
+RAG-6 (Header Based),all,Exact,HitRate,5,0.5811444652908068,0.5605065666041276,0.6031894934333959,2132
+RAG-6 (Header Based),all,Exact,MRR,5,0.4708567854909318,0.45122674327704815,0.4923076923076923,2132
+RAG-6 (Header Based),all,Exact,nDCG,5,0.49847724200906124,0.47907049652370726,0.5195559321585862,2132
+RAG-6 (Header Based),all,Exact,HitRate,10,0.623358348968105,0.6022396810506566,0.6440079737335835,2132
+RAG-6 (Header Based),all,Exact,MRR,10,0.4768813841984574,0.45733381540546175,0.49834426371392837,2132
+RAG-6 (Header Based),all,Exact,nDCG,10,0.5125172678181769,0.49285474812324626,0.5331422634900217,2132
+RAG-6 (Header Based),standalone,Doc,HitRate,1,0.7947454844006568,,,1827
+RAG-6 (Header Based),standalone,Doc,MRR,1,0.7947454844006568,,,1827
+RAG-6 (Header Based),standalone,Doc,nDCG,1,0.7947454844006568,,,1827
+RAG-6 (Header Based),standalone,Doc,HitRate,3,0.9036672140120416,,,1827
+RAG-6 (Header Based),standalone,Doc,MRR,3,0.8437328954570333,,,1827
+RAG-6 (Header Based),standalone,Doc,nDCG,3,0.8591676167194486,,,1827
+RAG-6 (Header Based),standalone,Doc,HitRate,5,0.9304871373836892,,,1827
+RAG-6 (Header Based),standalone,Doc,MRR,5,0.8497810618500273,,,1827
+RAG-6 (Header Based),standalone,Doc,nDCG,5,0.8701426475489308,,,1827
+RAG-6 (Header Based),standalone,Doc,HitRate,10,0.963327859879584,,,1827
+RAG-6 (Header Based),standalone,Doc,MRR,10,0.854201310153691,,,1827
+RAG-6 (Header Based),standalone,Doc,nDCG,10,0.8808024008386123,,,1827
+RAG-6 (Header Based),standalone,Exact,HitRate,1,0.39080459770114945,,,1827
+RAG-6 (Header Based),standalone,Exact,MRR,1,0.39080459770114945,,,1827
+RAG-6 (Header Based),standalone,Exact,nDCG,1,0.39080459770114945,,,1827
+RAG-6 (Header Based),standalone,Exact,HitRate,3,0.5216201423097975,,,1827
+RAG-6 (Header Based),standalone,Exact,MRR,3,0.44854953475643133,,,1827
+RAG-6 (Header Based),standalone,Exact,nDCG,3,0.4673202582395052,,,1827
+RAG-6 (Header Based),standalone,Exact,HitRate,5,0.571975916803503,,,1827
+RAG-6 (Header Based),standalone,Exact,MRR,5,0.46020799124247397,,,1827
+RAG-6 (Header Based),standalone,Exact,nDCG,5,0.488191761148225,,,1827
+RAG-6 (Header Based),standalone,Exact,HitRate,10,0.6163108921729611,,,1827
+RAG-6 (Header Based),standalone,Exact,MRR,10,0.46655806639386277,,,1827
+RAG-6 (Header Based),standalone,Exact,nDCG,10,0.502959388842213,,,1827
+RAG-6 (Header Based),answerable,Doc,HitRate,1,0.8060368921185019,,,1789
+RAG-6 (Header Based),answerable,Doc,MRR,1,0.8060368921185019,,,1789
+RAG-6 (Header Based),answerable,Doc,nDCG,1,0.8060368921185019,,,1789
+RAG-6 (Header Based),answerable,Doc,HitRate,3,0.9083286752375629,,,1789
+RAG-6 (Header Based),answerable,Doc,MRR,3,0.8520588783305386,,,1789
+RAG-6 (Header Based),answerable,Doc,nDCG,3,0.8665505916473709,,,1789
+RAG-6 (Header Based),answerable,Doc,HitRate,5,0.9301285634432644,,,1789
+RAG-6 (Header Based),answerable,Doc,MRR,5,0.8569778274641326,,,1789
+RAG-6 (Header Based),answerable,Doc,nDCG,5,0.8754738641453721,,,1789
+RAG-6 (Header Based),answerable,Doc,HitRate,10,0.9603130240357741,,,1789
+RAG-6 (Header Based),answerable,Doc,MRR,10,0.8610600938717204,,,1789
+RAG-6 (Header Based),answerable,Doc,nDCG,10,0.8852896160053979,,,1789
+RAG-6 (Header Based),answerable,Exact,HitRate,1,0.47792062604807156,,,1789
+RAG-6 (Header Based),answerable,Exact,MRR,1,0.47792062604807156,,,1789
+RAG-6 (Header Based),answerable,Exact,nDCG,1,0.47792062604807156,,,1789
+RAG-6 (Header Based),answerable,Exact,HitRate,3,0.6310788149804359,,,1789
+RAG-6 (Header Based),answerable,Exact,MRR,3,0.5457425004658096,,,1789
+RAG-6 (Header Based),answerable,Exact,nDCG,3,0.567673200471136,,,1789
+RAG-6 (Header Based),answerable,Exact,HitRate,5,0.6875349357182784,,,1789
+RAG-6 (Header Based),answerable,Exact,MRR,5,0.5587385876653624,,,1789
+RAG-6 (Header Based),answerable,Exact,nDCG,5,0.5910076791362332,,,1789
+RAG-6 (Header Based),answerable,Exact,HitRate,10,0.7367244270542203,,,1789
+RAG-6 (Header Based),answerable,Exact,MRR,10,0.565745250960455,,,1789
+RAG-6 (Header Based),answerable,Exact,nDCG,10,0.6073541265954803,,,1789
+RAG-6 (Header Based),domain:matematik-fizik,Doc,HitRate,1,0.8416666666666667,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,MRR,1,0.8416666666666667,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,nDCG,1,0.8416666666666667,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,HitRate,3,0.9479166666666666,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,MRR,3,0.8902777777777778,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,nDCG,3,0.9051569388244071,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,HitRate,5,0.9625,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,MRR,5,0.8936111111111111,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,nDCG,5,0.9111637401869012,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,HitRate,10,0.975,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,MRR,10,0.8954298941798942,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Doc,nDCG,10,0.9153584159574846,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,HitRate,1,0.38125,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,MRR,1,0.38125,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,nDCG,1,0.38125,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,HitRate,3,0.49583333333333335,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,MRR,3,0.43090277777777786,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,nDCG,3,0.4475430872247044,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,HitRate,5,0.5520833333333334,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,MRR,5,0.44402777777777774,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,nDCG,5,0.47094694828810435,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,HitRate,10,0.5791666666666667,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,MRR,10,0.4481117724867725,,,480
+RAG-6 (Header Based),domain:matematik-fizik,Exact,nDCG,10,0.48017370585980734,,,480
+RAG-6 (Header Based),domain:ml-ai,Doc,HitRate,1,0.7913907284768212,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,MRR,1,0.7913907284768212,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,nDCG,1,0.7913907284768212,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,HitRate,3,0.9304635761589404,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,MRR,3,0.8537527593818985,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,nDCG,3,0.8734998769985837,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,HitRate,5,0.9536423841059603,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,MRR,5,0.8592163355408389,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,nDCG,5,0.8831922227099612,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,HitRate,10,0.9701986754966887,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,MRR,10,0.8612950699043413,,,302
+RAG-6 (Header Based),domain:ml-ai,Doc,nDCG,10,0.888414844440628,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,HitRate,1,0.44039735099337746,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,MRR,1,0.44039735099337746,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,nDCG,1,0.44039735099337746,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,HitRate,3,0.5728476821192053,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,MRR,3,0.49834437086092714,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,nDCG,3,0.5174610723155181,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,HitRate,5,0.6258278145695364,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,MRR,5,0.5105960264900662,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,nDCG,5,0.5394077028590318,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,HitRate,10,0.6490066225165563,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,MRR,10,0.5137364658887837,,,302
+RAG-6 (Header Based),domain:ml-ai,Exact,nDCG,10,0.5469531911121736,,,302
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,HitRate,1,0.8,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,MRR,1,0.8,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,nDCG,1,0.8,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,HitRate,3,0.8875,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,MRR,3,0.8379166666666665,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,nDCG,3,0.8506238120625015,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,HitRate,5,0.9175,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,MRR,5,0.8447916666666667,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,nDCG,5,0.8629963119192178,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,HitRate,10,0.9675,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,MRR,10,0.8512509920634921,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Doc,nDCG,10,0.87895612960304,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,HitRate,1,0.265,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,MRR,1,0.265,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,nDCG,1,0.265,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,HitRate,3,0.335,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,MRR,3,0.2958333333333333,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,nDCG,3,0.30589183891071564,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,HitRate,5,0.375,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,MRR,5,0.30483333333333335,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,nDCG,5,0.3222424262168742,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,HitRate,10,0.405,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,MRR,10,0.30911309523809527,,,400
+RAG-6 (Header Based),domain:sosyal-bilimler,Exact,nDCG,10,0.33221766457124263,,,400
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,HitRate,1,0.6822222222222222,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,MRR,1,0.6822222222222222,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,nDCG,1,0.6822222222222222,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,HitRate,3,0.8177777777777778,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,MRR,3,0.742962962962963,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,nDCG,3,0.762220110333336,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,HitRate,5,0.8577777777777778,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,MRR,5,0.7518518518518519,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,nDCG,5,0.7784733115265196,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,HitRate,10,0.9177777777777778,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,MRR,10,0.7600361552028219,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Doc,nDCG,10,0.7980616487052525,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,HitRate,1,0.3844444444444444,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,MRR,1,0.3844444444444444,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,nDCG,1,0.3844444444444444,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,HitRate,3,0.5466666666666666,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,MRR,3,0.4577777777777778,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,nDCG,3,0.48068521596825736,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,HitRate,5,0.5955555555555555,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,MRR,5,0.46900000000000003,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,nDCG,5,0.5008640393461794,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,HitRate,10,0.6644444444444444,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,MRR,10,0.47846649029982363,,,450
+RAG-6 (Header Based),domain:sosyal-toplum,Exact,nDCG,10,0.523408589471429,,,450
+RAG-6 (Header Based),domain:tip,Doc,HitRate,1,0.84,,,500
+RAG-6 (Header Based),domain:tip,Doc,MRR,1,0.84,,,500
+RAG-6 (Header Based),domain:tip,Doc,nDCG,1,0.84,,,500
+RAG-6 (Header Based),domain:tip,Doc,HitRate,3,0.932,,,500
+RAG-6 (Header Based),domain:tip,Doc,MRR,3,0.8813333333333334,,,500
+RAG-6 (Header Based),domain:tip,Doc,nDCG,3,0.8943795042285733,,,500
+RAG-6 (Header Based),domain:tip,Doc,HitRate,5,0.948,,,500
+RAG-6 (Header Based),domain:tip,Doc,MRR,5,0.8848333333333332,,,500
+RAG-6 (Header Based),domain:tip,Doc,nDCG,5,0.9008320916493591,,,500
+RAG-6 (Header Based),domain:tip,Doc,HitRate,10,0.964,,,500
+RAG-6 (Header Based),domain:tip,Doc,MRR,10,0.8871857142857144,,,500
+RAG-6 (Header Based),domain:tip,Doc,nDCG,10,0.9062170894923774,,,500
+RAG-6 (Header Based),domain:tip,Exact,HitRate,1,0.524,,,500
+RAG-6 (Header Based),domain:tip,Exact,MRR,1,0.524,,,500
+RAG-6 (Header Based),domain:tip,Exact,nDCG,1,0.524,,,500
+RAG-6 (Header Based),domain:tip,Exact,HitRate,3,0.686,,,500
+RAG-6 (Header Based),domain:tip,Exact,MRR,3,0.596,,,500
+RAG-6 (Header Based),domain:tip,Exact,nDCG,3,0.6191404133857175,,,500
+RAG-6 (Header Based),domain:tip,Exact,HitRate,5,0.734,,,500
+RAG-6 (Header Based),domain:tip,Exact,MRR,5,0.6071,,,500
+RAG-6 (Header Based),domain:tip,Exact,nDCG,5,0.639024060658141,,,500
+RAG-6 (Header Based),domain:tip,Exact,HitRate,10,0.788,,,500
+RAG-6 (Header Based),domain:tip,Exact,MRR,10,0.6150277777777777,,,500
+RAG-6 (Header Based),domain:tip,Exact,nDCG,10,0.6572052827382581,,,500
+RAG-7 (BM25 Only),all,Doc,HitRate,1,0.9272983114446529,0.9160295497185741,0.9385670731707317,2132
+RAG-7 (BM25 Only),all,Doc,MRR,1,0.9272983114446529,0.9160295497185741,0.9385670731707317,2132
+RAG-7 (BM25 Only),all,Doc,nDCG,1,0.9272983114446529,0.9160295497185741,0.9385670731707317,2132
+RAG-7 (BM25 Only),all,Doc,HitRate,3,0.9690431519699813,0.9615384615384616,0.9765478424015009,2132
+RAG-7 (BM25 Only),all,Doc,MRR,3,0.9467636022514071,0.9383970450281426,0.9556773764853034,2132
+RAG-7 (BM25 Only),all,Doc,nDCG,3,0.9525309627127455,0.9441445690352798,0.9607442465185281,2132
+RAG-7 (BM25 Only),all,Doc,HitRate,5,0.9793621013133208,0.973264540337711,0.9854596622889306,2132
+RAG-7 (BM25 Only),all,Doc,MRR,5,0.949108818011257,0.9412165806754221,0.9577005159474672,2132
+RAG-7 (BM25 Only),all,Doc,nDCG,5,0.9567695399966226,0.9495780634407025,0.9642752538066828,2132
+RAG-7 (BM25 Only),all,Doc,HitRate,10,0.9849906191369606,0.9798311444652908,0.9896810506566605,2132
+RAG-7 (BM25 Only),all,Doc,MRR,10,0.9499560737365614,0.9420773306977575,0.9582459461270437,2132
+RAG-7 (BM25 Only),all,Doc,nDCG,10,0.9586848988764247,0.9518371449113294,0.9656361845971052,2132
+RAG-7 (BM25 Only),all,Exact,HitRate,1,0.5229831144465291,0.50187617260788,0.5440900562851783,2132
+RAG-7 (BM25 Only),all,Exact,MRR,1,0.5229831144465291,0.50187617260788,0.5440900562851783,2132
+RAG-7 (BM25 Only),all,Exact,nDCG,1,0.5229831144465291,0.50187617260788,0.5440900562851783,2132
+RAG-7 (BM25 Only),all,Exact,HitRate,3,0.6041275797373359,0.5825515947467167,0.6247772045028143,2132
+RAG-7 (BM25 Only),all,Exact,MRR,3,0.559490306441526,0.5386960600375235,0.5795125859912446,2132
+RAG-7 (BM25 Only),all,Exact,nDCG,3,0.5709861633124514,0.5500237391027892,0.5911970500644116,2132
+RAG-7 (BM25 Only),all,Exact,HitRate,5,0.6271106941838649,0.6055347091932458,0.648217636022514,2132
+RAG-7 (BM25 Only),all,Exact,MRR,5,0.5648608505315822,0.5442290103189493,0.5847731003752344,2132
+RAG-7 (BM25 Only),all,Exact,nDCG,5,0.5805555682524958,0.5599493975245841,0.6002420271287758,2132
+RAG-7 (BM25 Only),all,Exact,HitRate,10,0.6458724202626641,0.625234521575985,0.6655722326454033,2132
+RAG-7 (BM25 Only),all,Exact,MRR,10,0.5675371884213347,0.5471078650346943,0.5873695845990053,2132
+RAG-7 (BM25 Only),all,Exact,nDCG,10,0.5867935266104973,0.5662851115187271,0.6061046533745532,2132
+RAG-7 (BM25 Only),standalone,Doc,HitRate,1,0.9288451012588944,,,1827
+RAG-7 (BM25 Only),standalone,Doc,MRR,1,0.9288451012588944,,,1827
+RAG-7 (BM25 Only),standalone,Doc,nDCG,1,0.9288451012588944,,,1827
+RAG-7 (BM25 Only),standalone,Doc,HitRate,3,0.9737274220032841,,,1827
+RAG-7 (BM25 Only),standalone,Doc,MRR,3,0.949826673964605,,,1827
+RAG-7 (BM25 Only),standalone,Doc,nDCG,3,0.9560160721049349,,,1827
+RAG-7 (BM25 Only),standalone,Doc,HitRate,5,0.9813902572523262,,,1827
+RAG-7 (BM25 Only),standalone,Doc,MRR,5,0.9516329137018792,,,1827
+RAG-7 (BM25 Only),standalone,Doc,nDCG,5,0.9592203287057408,,,1827
+RAG-7 (BM25 Only),standalone,Doc,HitRate,10,0.9879584017515052,,,1827
+RAG-7 (BM25 Only),standalone,Doc,MRR,10,0.9526216105854858,,,1827
+RAG-7 (BM25 Only),standalone,Doc,nDCG,10,0.9614554382469219,,,1827
+RAG-7 (BM25 Only),standalone,Exact,HitRate,1,0.5210727969348659,,,1827
+RAG-7 (BM25 Only),standalone,Exact,MRR,1,0.5210727969348659,,,1827
+RAG-7 (BM25 Only),standalone,Exact,nDCG,1,0.5210727969348659,,,1827
+RAG-7 (BM25 Only),standalone,Exact,HitRate,3,0.595511767925561,,,1827
+RAG-7 (BM25 Only),standalone,Exact,MRR,3,0.5544608648056923,,,1827
+RAG-7 (BM25 Only),standalone,Exact,nDCG,3,0.5650286791656908,,,1827
+RAG-7 (BM25 Only),standalone,Exact,HitRate,5,0.6146688560481663,,,1827
+RAG-7 (BM25 Only),standalone,Exact,MRR,5,0.5589217296113848,,,1827
+RAG-7 (BM25 Only),standalone,Exact,nDCG,5,0.5729913472130376,,,1827
+RAG-7 (BM25 Only),standalone,Exact,HitRate,10,0.6310892172961139,,,1827
+RAG-7 (BM25 Only),standalone,Exact,MRR,10,0.5612848715475973,,,1827
+RAG-7 (BM25 Only),standalone,Exact,nDCG,10,0.5784720299054706,,,1827
+RAG-7 (BM25 Only),answerable,Doc,HitRate,1,0.9390721073225266,,,1789
+RAG-7 (BM25 Only),answerable,Doc,MRR,1,0.9390721073225266,,,1789
+RAG-7 (BM25 Only),answerable,Doc,nDCG,1,0.9390721073225266,,,1789
+RAG-7 (BM25 Only),answerable,Doc,HitRate,3,0.9737283398546674,,,1789
+RAG-7 (BM25 Only),answerable,Doc,MRR,3,0.9553754425190981,,,1789
+RAG-7 (BM25 Only),answerable,Doc,nDCG,3,0.9601327095763802,,,1789
+RAG-7 (BM25 Only),answerable,Doc,HitRate,5,0.9832308552263834,,,1789
+RAG-7 (BM25 Only),answerable,Doc,MRR,5,0.957583379914291,,,1789
+RAG-7 (BM25 Only),answerable,Doc,nDCG,5,0.9640782428252426,,,1789
+RAG-7 (BM25 Only),answerable,Doc,HitRate,10,0.9882615986584684,,,1789
+RAG-7 (BM25 Only),answerable,Doc,MRR,10,0.9583402095699468,,,1789
+RAG-7 (BM25 Only),answerable,Doc,nDCG,10,0.9657890708173965,,,1789
+RAG-7 (BM25 Only),answerable,Exact,HitRate,1,0.6232532140860816,,,1789
+RAG-7 (BM25 Only),answerable,Exact,MRR,1,0.6232532140860816,,,1789
+RAG-7 (BM25 Only),answerable,Exact,nDCG,1,0.6232532140860816,,,1789
+RAG-7 (BM25 Only),answerable,Exact,HitRate,3,0.7188373392956959,,,1789
+RAG-7 (BM25 Only),answerable,Exact,MRR,3,0.6662008570896218,,,1789
+RAG-7 (BM25 Only),answerable,Exact,nDCG,3,0.6797544106623832,,,1789
+RAG-7 (BM25 Only),answerable,Exact,HitRate,5,0.7445500279485746,,,1789
+RAG-7 (BM25 Only),answerable,Exact,MRR,5,0.6722377492081236,,,1789
+RAG-7 (BM25 Only),answerable,Exact,nDCG,5,0.6904853157264592,,,1789
+RAG-7 (BM25 Only),answerable,Exact,HitRate,10,0.7646730016769144,,,1789
+RAG-7 (BM25 Only),answerable,Exact,MRR,10,0.675129983053404,,,1789
+RAG-7 (BM25 Only),answerable,Exact,nDCG,10,0.6971972926451233,,,1789
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,HitRate,1,0.9041666666666667,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,MRR,1,0.9041666666666667,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,nDCG,1,0.9041666666666667,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,HitRate,3,0.9833333333333333,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,MRR,3,0.940625,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,nDCG,3,0.9516603392782755,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,HitRate,5,0.9916666666666667,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,MRR,5,0.9425000000000001,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,nDCG,5,0.9550667116337254,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,HitRate,10,0.9916666666666667,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,MRR,10,0.9425000000000001,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Doc,nDCG,10,0.9550667116337254,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,HitRate,1,0.49166666666666664,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,MRR,1,0.49166666666666664,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,nDCG,1,0.49166666666666664,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,HitRate,3,0.5708333333333333,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,MRR,3,0.5274305555555555,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,nDCG,3,0.5386147986383946,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,HitRate,5,0.5958333333333333,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,MRR,5,0.5331597222222223,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,nDCG,5,0.548925215185658,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,HitRate,10,0.6104166666666667,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,MRR,10,0.5352223875661376,,,480
+RAG-7 (BM25 Only),domain:matematik-fizik,Exact,nDCG,10,0.5537574646914311,,,480
+RAG-7 (BM25 Only),domain:ml-ai,Doc,HitRate,1,0.956953642384106,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,MRR,1,0.956953642384106,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,nDCG,1,0.956953642384106,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,HitRate,3,1.0,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,MRR,3,0.9779249448123619,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,nDCG,3,0.9836793279564818,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,HitRate,5,1.0,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,MRR,5,0.9779249448123619,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,nDCG,5,0.9836793279564818,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,HitRate,10,1.0,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,MRR,10,0.9779249448123619,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Doc,nDCG,10,0.9836793279564818,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,HitRate,1,0.5695364238410596,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,MRR,1,0.5695364238410596,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,nDCG,1,0.5695364238410596,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,HitRate,3,0.6622516556291391,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,MRR,3,0.6109271523178808,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,nDCG,3,0.6241313421121116,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,HitRate,5,0.6887417218543046,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,MRR,5,0.6172185430463576,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,nDCG,5,0.635249769141613,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,HitRate,10,0.7152317880794702,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,MRR,10,0.6210488279196889,,,302
+RAG-7 (BM25 Only),domain:ml-ai,Exact,nDCG,10,0.6441096597041267,,,302
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,HitRate,1,0.9725,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,MRR,1,0.9725,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,nDCG,1,0.9725,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,HitRate,3,0.9825,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,MRR,3,0.9775,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,nDCG,3,0.9788092975357146,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,HitRate,5,0.9875,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,MRR,5,0.97875,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,nDCG,5,0.9809626803260815,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,HitRate,10,0.9925,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,MRR,10,0.9795833333333333,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Doc,nDCG,10,0.9827437162616216,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,HitRate,1,0.235,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,MRR,1,0.235,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,nDCG,1,0.235,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,HitRate,3,0.275,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,MRR,3,0.25333333333333335,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,nDCG,3,0.2589278926071437,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,HitRate,5,0.2775,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,MRR,5,0.25383333333333336,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,nDCG,5,0.25989502462523006,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,HitRate,10,0.28,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,MRR,10,0.2541111111111111,,,400
+RAG-7 (BM25 Only),domain:sosyal-bilimler,Exact,nDCG,10,0.26064759961439,,,400
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,HitRate,1,0.8422222222222222,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,MRR,1,0.8422222222222222,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,nDCG,1,0.8422222222222222,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,HitRate,3,0.9044444444444445,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,MRR,3,0.8703703703703705,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,nDCG,3,0.8791524334920647,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,HitRate,5,0.9266666666666666,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,MRR,5,0.8753703703703702,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,nDCG,5,0.8882360931065973,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,HitRate,10,0.9488888888888889,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,MRR,10,0.8786437389770724,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Doc,nDCG,10,0.8957274947899796,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,HitRate,1,0.5466666666666666,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,MRR,1,0.5466666666666666,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,nDCG,1,0.5466666666666666,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,HitRate,3,0.6444444444444445,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,MRR,3,0.5903703703703703,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,nDCG,3,0.6042842057936527,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,HitRate,5,0.6844444444444444,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,MRR,5,0.5998148148148147,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,nDCG,5,0.6210243375517123,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,HitRate,10,0.7266666666666667,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,MRR,10,0.6059647266313933,,,450
+RAG-7 (BM25 Only),domain:sosyal-toplum,Exact,nDCG,10,0.6351869848153021,,,450
+RAG-7 (BM25 Only),domain:tip,Doc,HitRate,1,0.972,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,MRR,1,0.972,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,nDCG,1,0.972,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,HitRate,3,0.984,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,MRR,3,0.978,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,nDCG,3,0.9795711570428576,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,HitRate,5,0.996,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,MRR,5,0.9807,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,nDCG,5,0.9844763332347051,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,HitRate,10,0.996,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,MRR,10,0.9807,,,500
+RAG-7 (BM25 Only),domain:tip,Doc,nDCG,10,0.9844763332347051,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,HitRate,1,0.734,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,MRR,1,0.734,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,nDCG,1,0.734,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,HitRate,3,0.828,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,MRR,3,0.7763333333333333,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,nDCG,3,0.7896413637357161,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,HitRate,5,0.848,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,MRR,5,0.7810333333333334,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,nDCG,5,0.797991952392151,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,HitRate,10,0.858,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,MRR,10,0.7823944444444444,,,500
+RAG-7 (BM25 Only),domain:tip,Exact,nDCG,10,0.8012518308768105,,,500
+RAG-8 (Hybrid simple),all,Doc,HitRate,1,0.9272983114446529,0.9160295497185741,0.9385670731707317,2132
+RAG-8 (Hybrid simple),all,Doc,MRR,1,0.9272983114446529,0.9160295497185741,0.9385670731707317,2132
+RAG-8 (Hybrid simple),all,Doc,nDCG,1,0.9272983114446529,0.9160295497185741,0.9385670731707317,2132
+RAG-8 (Hybrid simple),all,Doc,HitRate,3,0.9690431519699813,0.9615384615384616,0.9765478424015009,2132
+RAG-8 (Hybrid simple),all,Doc,MRR,3,0.9467636022514071,0.9383970450281426,0.9556773764853034,2132
+RAG-8 (Hybrid simple),all,Doc,nDCG,3,0.9525309627127455,0.9441445690352798,0.9607442465185281,2132
+RAG-8 (Hybrid simple),all,Doc,HitRate,5,0.9793621013133208,0.973264540337711,0.9854596622889306,2132
+RAG-8 (Hybrid simple),all,Doc,MRR,5,0.949108818011257,0.9412165806754221,0.9577005159474672,2132
+RAG-8 (Hybrid simple),all,Doc,nDCG,5,0.9567695399966226,0.9495780634407025,0.9642752538066828,2132
+RAG-8 (Hybrid simple),all,Doc,HitRate,10,0.9849906191369606,0.9798311444652908,0.9896810506566605,2132
+RAG-8 (Hybrid simple),all,Doc,MRR,10,0.9499560737365614,0.9420773306977575,0.9582459461270437,2132
+RAG-8 (Hybrid simple),all,Doc,nDCG,10,0.9586848988764247,0.9518371449113294,0.9656361845971052,2132
+RAG-8 (Hybrid simple),all,Exact,HitRate,1,0.5229831144465291,0.50187617260788,0.5440900562851783,2132
+RAG-8 (Hybrid simple),all,Exact,MRR,1,0.5229831144465291,0.50187617260788,0.5440900562851783,2132
+RAG-8 (Hybrid simple),all,Exact,nDCG,1,0.5229831144465291,0.50187617260788,0.5440900562851783,2132
+RAG-8 (Hybrid simple),all,Exact,HitRate,3,0.6041275797373359,0.5825515947467167,0.6247772045028143,2132
+RAG-8 (Hybrid simple),all,Exact,MRR,3,0.559490306441526,0.5386960600375235,0.5795125859912446,2132
+RAG-8 (Hybrid simple),all,Exact,nDCG,3,0.5709861633124514,0.5500237391027892,0.5911970500644116,2132
+RAG-8 (Hybrid simple),all,Exact,HitRate,5,0.6271106941838649,0.6055347091932458,0.648217636022514,2132
+RAG-8 (Hybrid simple),all,Exact,MRR,5,0.5648608505315822,0.5442290103189493,0.5847731003752344,2132
+RAG-8 (Hybrid simple),all,Exact,nDCG,5,0.5805555682524958,0.5599493975245841,0.6002420271287758,2132
+RAG-8 (Hybrid simple),all,Exact,HitRate,10,0.6458724202626641,0.625234521575985,0.6655722326454033,2132
+RAG-8 (Hybrid simple),all,Exact,MRR,10,0.5675371884213347,0.5471078650346943,0.5873695845990053,2132
+RAG-8 (Hybrid simple),all,Exact,nDCG,10,0.5867935266104973,0.5662851115187271,0.6061046533745532,2132
+RAG-8 (Hybrid simple),standalone,Doc,HitRate,1,0.9288451012588944,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,MRR,1,0.9288451012588944,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,nDCG,1,0.9288451012588944,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,HitRate,3,0.9737274220032841,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,MRR,3,0.949826673964605,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,nDCG,3,0.9560160721049349,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,HitRate,5,0.9813902572523262,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,MRR,5,0.9516329137018792,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,nDCG,5,0.9592203287057408,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,HitRate,10,0.9879584017515052,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,MRR,10,0.9526216105854858,,,1827
+RAG-8 (Hybrid simple),standalone,Doc,nDCG,10,0.9614554382469219,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,HitRate,1,0.5210727969348659,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,MRR,1,0.5210727969348659,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,nDCG,1,0.5210727969348659,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,HitRate,3,0.595511767925561,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,MRR,3,0.5544608648056923,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,nDCG,3,0.5650286791656908,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,HitRate,5,0.6146688560481663,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,MRR,5,0.5589217296113848,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,nDCG,5,0.5729913472130376,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,HitRate,10,0.6310892172961139,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,MRR,10,0.5612848715475973,,,1827
+RAG-8 (Hybrid simple),standalone,Exact,nDCG,10,0.5784720299054706,,,1827
+RAG-8 (Hybrid simple),answerable,Doc,HitRate,1,0.9390721073225266,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,MRR,1,0.9390721073225266,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,nDCG,1,0.9390721073225266,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,HitRate,3,0.9737283398546674,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,MRR,3,0.9553754425190981,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,nDCG,3,0.9601327095763802,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,HitRate,5,0.9832308552263834,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,MRR,5,0.957583379914291,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,nDCG,5,0.9640782428252426,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,HitRate,10,0.9882615986584684,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,MRR,10,0.9583402095699468,,,1789
+RAG-8 (Hybrid simple),answerable,Doc,nDCG,10,0.9657890708173965,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,HitRate,1,0.6232532140860816,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,MRR,1,0.6232532140860816,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,nDCG,1,0.6232532140860816,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,HitRate,3,0.7188373392956959,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,MRR,3,0.6662008570896218,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,nDCG,3,0.6797544106623832,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,HitRate,5,0.7445500279485746,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,MRR,5,0.6722377492081236,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,nDCG,5,0.6904853157264592,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,HitRate,10,0.7646730016769144,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,MRR,10,0.675129983053404,,,1789
+RAG-8 (Hybrid simple),answerable,Exact,nDCG,10,0.6971972926451233,,,1789
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,HitRate,1,0.9041666666666667,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,MRR,1,0.9041666666666667,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,nDCG,1,0.9041666666666667,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,HitRate,3,0.9833333333333333,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,MRR,3,0.940625,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,nDCG,3,0.9516603392782755,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,HitRate,5,0.9916666666666667,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,MRR,5,0.9425000000000001,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,nDCG,5,0.9550667116337254,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,HitRate,10,0.9916666666666667,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,MRR,10,0.9425000000000001,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Doc,nDCG,10,0.9550667116337254,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,HitRate,1,0.49166666666666664,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,MRR,1,0.49166666666666664,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,nDCG,1,0.49166666666666664,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,HitRate,3,0.5708333333333333,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,MRR,3,0.5274305555555555,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,nDCG,3,0.5386147986383946,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,HitRate,5,0.5958333333333333,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,MRR,5,0.5331597222222223,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,nDCG,5,0.548925215185658,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,HitRate,10,0.6104166666666667,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,MRR,10,0.5352223875661376,,,480
+RAG-8 (Hybrid simple),domain:matematik-fizik,Exact,nDCG,10,0.5537574646914311,,,480
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,HitRate,1,0.956953642384106,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,MRR,1,0.956953642384106,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,nDCG,1,0.956953642384106,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,HitRate,3,1.0,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,MRR,3,0.9779249448123619,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,nDCG,3,0.9836793279564818,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,HitRate,5,1.0,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,MRR,5,0.9779249448123619,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,nDCG,5,0.9836793279564818,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,HitRate,10,1.0,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,MRR,10,0.9779249448123619,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Doc,nDCG,10,0.9836793279564818,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,HitRate,1,0.5695364238410596,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,MRR,1,0.5695364238410596,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,nDCG,1,0.5695364238410596,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,HitRate,3,0.6622516556291391,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,MRR,3,0.6109271523178808,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,nDCG,3,0.6241313421121116,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,HitRate,5,0.6887417218543046,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,MRR,5,0.6172185430463576,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,nDCG,5,0.635249769141613,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,HitRate,10,0.7152317880794702,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,MRR,10,0.6210488279196889,,,302
+RAG-8 (Hybrid simple),domain:ml-ai,Exact,nDCG,10,0.6441096597041267,,,302
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,HitRate,1,0.9725,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,MRR,1,0.9725,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,nDCG,1,0.9725,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,HitRate,3,0.9825,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,MRR,3,0.9775,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,nDCG,3,0.9788092975357146,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,HitRate,5,0.9875,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,MRR,5,0.97875,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,nDCG,5,0.9809626803260815,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,HitRate,10,0.9925,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,MRR,10,0.9795833333333333,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Doc,nDCG,10,0.9827437162616216,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,HitRate,1,0.235,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,MRR,1,0.235,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,nDCG,1,0.235,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,HitRate,3,0.275,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,MRR,3,0.25333333333333335,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,nDCG,3,0.2589278926071437,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,HitRate,5,0.2775,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,MRR,5,0.25383333333333336,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,nDCG,5,0.25989502462523006,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,HitRate,10,0.28,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,MRR,10,0.2541111111111111,,,400
+RAG-8 (Hybrid simple),domain:sosyal-bilimler,Exact,nDCG,10,0.26064759961439,,,400
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,HitRate,1,0.8422222222222222,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,MRR,1,0.8422222222222222,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,nDCG,1,0.8422222222222222,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,HitRate,3,0.9044444444444445,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,MRR,3,0.8703703703703705,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,nDCG,3,0.8791524334920647,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,HitRate,5,0.9266666666666666,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,MRR,5,0.8753703703703702,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,nDCG,5,0.8882360931065973,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,HitRate,10,0.9488888888888889,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,MRR,10,0.8786437389770724,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Doc,nDCG,10,0.8957274947899796,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,HitRate,1,0.5466666666666666,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,MRR,1,0.5466666666666666,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,nDCG,1,0.5466666666666666,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,HitRate,3,0.6444444444444445,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,MRR,3,0.5903703703703703,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,nDCG,3,0.6042842057936527,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,HitRate,5,0.6844444444444444,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,MRR,5,0.5998148148148147,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,nDCG,5,0.6210243375517123,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,HitRate,10,0.7266666666666667,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,MRR,10,0.6059647266313933,,,450
+RAG-8 (Hybrid simple),domain:sosyal-toplum,Exact,nDCG,10,0.6351869848153021,,,450
+RAG-8 (Hybrid simple),domain:tip,Doc,HitRate,1,0.972,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,MRR,1,0.972,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,nDCG,1,0.972,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,HitRate,3,0.984,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,MRR,3,0.978,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,nDCG,3,0.9795711570428576,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,HitRate,5,0.996,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,MRR,5,0.9807,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,nDCG,5,0.9844763332347051,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,HitRate,10,0.996,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,MRR,10,0.9807,,,500
+RAG-8 (Hybrid simple),domain:tip,Doc,nDCG,10,0.9844763332347051,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,HitRate,1,0.734,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,MRR,1,0.734,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,nDCG,1,0.734,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,HitRate,3,0.828,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,MRR,3,0.7763333333333333,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,nDCG,3,0.7896413637357161,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,HitRate,5,0.848,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,MRR,5,0.7810333333333334,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,nDCG,5,0.797991952392151,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,HitRate,10,0.858,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,MRR,10,0.7823944444444444,,,500
+RAG-8 (Hybrid simple),domain:tip,Exact,nDCG,10,0.8012518308768105,,,500
