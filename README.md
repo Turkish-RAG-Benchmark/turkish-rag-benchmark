@@ -120,7 +120,68 @@ Değerlendirmeler **LlamaIndex** framework'ü üzerinde, GPU (CUDA) hızlandırm
 
 ---
 
+## 🔧 Düzeltilmiş Değerlendirme (v1.1)
+
+> **Not:** İlk sürümün (v1) değerlendirme kodunda sonuçları etkileyen hatalar tespit edilmiştir. Bu bölüm, aynı veri seti (235 doküman, 2132 soru) üzerinde düzeltilmiş değerlendirmenin sonuçlarını sunar. v1'in orijinal sonuçları şeffaflık amacıyla aşağıda ([Deneysel Sonuçlar](#-deneysel-sonuçlar-ve-performans-metrikleri)) değiştirilmeden korunmuştur.
+
+### Yeniden üretim
+
+Yeni değerlendirme paketi (`src/trrag`) önce v1'in davranışını birebir taklit edecek şekilde çalıştırılmıştır (`configs/v1_compat.yaml`). 8 sistemin tamamı, 7 metrikte orijinal skorlara **ortalama 0.0011, en fazla 0.0028** farkla yeniden üretilmiştir ([v1_reproduction.csv](results/v1_reproduction.csv)). Böylece aşağıdaki farkların kod farkından değil, düzeltmelerden kaynaklandığı doğrulanmıştır.
+
+### Tespit edilen sorunlar
+
+| # | Sorun | Etkisi |
+| :--- | :--- | :--- |
+| H1 | `QueryFusionRetriever` varsayılan `simple` modunda çalışmış; ham skorların maksimumu alındığı için BM25 skorları (~10–30) cosine skorlarını (0–1) ezmiş | RAG-8 (Hybrid), RAG-7 (BM25) ile exact metriklerde birebir, doküman metriklerinde neredeyse aynı (0.9467 vs 0.9469) sonuç vermiş; yeniden üretimde iki sistem tamamen aynı çıkıyor. Yani hibrit arama fiilen gerçekleşmemiş |
+| H2 | BM25, İngilizce stemmer ve İngilizce stopword ile çalışmış | Türkçe Snowball stemmer ile fark anlamlı değil (p=0.66) |
+| H3 | `multilingual-e5-large` için `query:` / `passage:` önekleri kullanılmamış | Fark anlamlı değil (Exact_MRR@5 p=0.28) |
+| H4 | Exact metriği kelimeleri **alt dize** olarak aramış ("veri" → "verilerin") | Exact skorlar **~9 puan şişmiş** (aynı BM25 sıralamaları: Exact_MRR@5 0.572 → 0.481) |
+| H5 | Hata veren sorgular ortalamadan sessizce çıkarılmış | Yeni koşularda hata yok; her sorgu için 10 sonuç döndüğü doğrulandı |
+| H6 | Tek ilgili doküman olduğundan Recall = HitRate, MAP = MRR | Raporlama HitRate, MRR, nDCG ile sadeleştirildi |
+| H7 | Kazananlar test seti üzerinden ve sırayla (açgözlü) seçilmiş | v2'de dev/test ayrımı yapılacak |
+| H8 | Güven aralığı ve anlamlılık testi yok | %95 bootstrap güven aralıkları ve eşleştirilmiş permütasyon testi eklendi |
+| H9 | 1024'lük parçaların %79'u e5'in 512 token sınırını aşıp kesilmiş | Parça boyutunu modelin kendi tokenizer'ıyla ölçme seçeneği eklendi |
+| H10 | `paraphrase-multilingual-mpnet` modelinin sınırı 128 token; 512'lik parçaların %98'i kesilmiş (v1'de başa eklenen dosya yolu meta verisi kalan alanı da daraltmış) | v1'deki "paraphrase modeli Türkçe'de zayıf" yorumu bu kesilmeden etkilenmiş |
+| — | Veri setinde birebir aynı 3 doküman çifti (FM04=FM22, FM05=FM21, m20=m44; 52 soru) | Doğru metni getiren sistem "yanlış doküman" sayılıyordu; artık aynı doküman kabul ediliyor |
+
+### Düzeltilmiş sonuçlar (K=5)
+
+Konfigürasyon: `configs/v1_fixed.yaml`. Hybrid için Reciprocal Rank Fusion, BM25 için Türkçe tokenizasyon, e5 için önekler, token bazlı exact metriği kullanılmıştır. Tüm sonuçlar: [results/v1_fixed](results/v1_fixed/), v1 ile karşılaştırma: [v1_original_vs_fixed.csv](results/v1_original_vs_fixed.csv).
+
+| Sistem | Doc_MRR@5 (v1 → v1.1) | Exact_HitRate@5 (v1 → v1.1) | Exact_MRR@5 (v1 → v1.1) |
+| :--- | :---: | :---: | :---: |
+| RAG-1 (bge-m3) | 0.9252 → 0.9396 | 0.5310 → 0.4587 | 0.4435 → 0.3883 |
+| RAG-2 (multilingual-e5-large) | 0.9335 → 0.9422 | 0.5446 → 0.4611 | 0.4550 → 0.3899 |
+| RAG-3 (paraphrase-mpnet) | 0.7569 → 0.8385 | 0.3016 → 0.3222 | 0.2241 → 0.2446 |
+| RAG-4 (256/50) | 0.9421 → 0.9530 | 0.4184 → 0.3813 | 0.3466 → 0.3185 |
+| RAG-5 (1024/200) | 0.9154 → 0.9276 | 0.6074 → 0.5216 | 0.5155 → 0.4417 |
+| RAG-6 (Header Based) | 0.8475 → 0.8722 | 0.5821 → 0.5113 | 0.4699 → 0.4130 |
+| RAG-7 (BM25) | 0.9469 → 0.9507 | 0.6276 → 0.5478 | 0.5651 → 0.4809 |
+| RAG-8 (Hybrid, simple → RRF) | 0.9467 → 0.9496 | 0.6276 → 0.5492 | 0.5651 → 0.4719 |
+| *Hybrid relative_score* | — | 0.5483 | 0.4856 |
+| *Qwen3-Embedding-0.6B (yeni)* | — | 0.4400 | 0.3587 |
+
+### v1 bulgularının yeniden değerlendirilmesi
+
+1. **"En iyi embedding modeli multilingual-e5-large"** → **Desteklenmiyor.** e5-large ile bge-m3 arasındaki fark istatistiksel olarak anlamlı değil (Exact_MRR@5 p=0.69, Doc_MRR@5 p=0.44). İkisi eşdeğer kabul edilmelidir. Qwen3-Embedding-0.6B her ikisinden de anlamlı ölçüde düşük (p<0.001).
+2. **"paraphrase-multilingual Türkçe'de zayıf"** → **Bu kurulumla ölçülemez.** Model parçaların yalnızca ilk 128 token'ını görüyor (H10).
+3. **"Küçük parça doküman bulmada, büyük parça cevap bulmada iyi"** → **Doküman kısmı geçerli** (256 > 1024, p<0.001). **Cevap kısmı büyük ölçüde metrik kaynaklı:** exact metriği uzun parçaları kayırıyor. e5-base ile yapılan ablasyonda Exact_MRR@5 parçadaki kelime sayısıyla birlikte artıyor: 145 kelimede 0.386, 245'te 0.424, 296'da 0.432 ([ablation_e5base](results/v1_fixed/ablation_e5base_summary_wide.csv)).
+4. **"BM25 genel şampiyon"** → **Geçerli, ancak bir uyarıyla.** BM25 tüm yoğun (dense) modellerden iyi ya da onlara eşit (RAG-5'e karşı p<0.001). Ancak soru içerik kelimelerinin **%71.5'i kaynak metinde birebir aynı biçimde** geçiyor. LLM soruları metinden kelime kopyalayarak üretmiş, bu da leksikal aramayı yapay olarak avantajlı kılıyor. Türkçe stemmer'ın etkisiz kalması da bununla uyumlu.
+5. **"Hybrid ile BM25 arasında fark yok"** → **Sonuç benzer, sebebi farklı.** v1'deki eşitlik bir hatadan kaynaklanıyordu (H1). Füzyon doğru çalıştığında da kazanç yok: RRF doküman düzeyinde BM25'e eşit (p=0.69), exact düzeyinde biraz düşük (p=0.01); relative_score BM25'e eşit (p=0.14).
+6. **Tavan etkisi:** Kaynak dokümanın tamamı verilse bile soruların yalnızca **%77'si** (1635/2132) exact eşiğini geçebiliyor. En zor alan sosyal bilimler: Exact_MRR@5 değerleri 0.11–0.20 arasında.
+
+### Sonraki sürüm (v2) için çıkarımlar
+
+* Sorular metinden farklı kelimelerle (paraphrase) ve bağlamdan bağımsız yazılmalı. Şu an ~305 soru (%14) "Bu çalışmada…" gibi ifadeler içeriyor.
+* Her cevap için metindeki **kanıt aralığı (evidence span)** kaydedilmeli; böylece parça boyutundan bağımsız bir metrik kullanılabilir.
+* Kopya dokümanlar temizlenmeli, derlem büyütülmeli (doküman bulma görevi Doc_HitRate@10 ≈ 0.98 ile doygun), soruların bir kısmı insanlar tarafından doğrulanmalı.
+* Reranker, daha güncel embedding modelleri ve generation (cevap üretimi) değerlendirmesi eklenmeli.
+
+---
+
 ## 🏆 Deneysel Sonuçlar ve Performans Metrikleri
+
+> ⚠️ Bu bölüm v1'in **orijinal** sonuçlarıdır ve yukarıda açıklanan değerlendirme hatalarını içerir. Güncel sonuçlar için [Düzeltilmiş Değerlendirme (v1.1)](#-düzeltilmiş-değerlendirme-v11) bölümüne bakın.
 
 Modeller hem **Doküman Düzeyinde (Document-Level)** hem de **Tam Eşleşme/Parça Düzeyinde (Exact-Match Chunk-Level)** ikişer temel metrik üzerinden test edilmiştir:
 1. **Doküman Düzeyi (Doc_HitRate & Doc_MRR):** Sorgunun türetildiği doğru makalenin (dokümanın) geri getirilen parçalar arasında yer alıp almadığını ve kaçıncı sırada olduğunu ölçer.
@@ -226,6 +287,8 @@ Değerlendirme veri setindeki 2132 soru-cevap çifti üzerinde test edilen 8 RAG
 ---
 
 ## 🧠 Temel Bulgular ve Mimari Tavsiyeler 
+
+> ⚠️ Bu bulgular v1'in orijinal sonuçlarına dayanır. Hangilerinin düzeltilmiş değerlendirmede geçerli kaldığı [v1 bulgularının yeniden değerlendirilmesi](#v1-bulgularının-yeniden-değerlendirilmesi) bölümünde açıklanmıştır.
 
 Bu benchmark çalışmasından elde edilen somut çıkarımlar ve Türkçe RAG projeleri için tasarım önerileri şunlardır:
 
