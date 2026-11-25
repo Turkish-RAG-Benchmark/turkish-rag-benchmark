@@ -18,10 +18,23 @@ class Chunk:
     text: str
 
 
+def _hf_tokenizer(name: str):
+    """Chunk boyutunu bir embedding modelinin kendi token'larıyla ölçmek için."""
+    from transformers import AutoTokenizer
+
+    tok = AutoTokenizer.from_pretrained(name)
+    return lambda text: tok.encode(text, add_special_tokens=False)
+
+
 def make_splitter(spec: dict):
     kind = spec.get("type", "sentence")
     if kind == "sentence":
-        return SentenceSplitter(chunk_size=int(spec["size"]), chunk_overlap=int(spec["overlap"]))
+        # Varsayılan: llama-index'in tiktoken (cl100k) sayımı, v1 ile aynı.
+        # "tokenizer" verilirse boyut o modelin token'larıyla ölçülür; böylece parçalar
+        # modelin max_seq_length sınırını aşmaz (kesilme/truncation olmaz).
+        tokenizer = _hf_tokenizer(spec["tokenizer"]) if spec.get("tokenizer") else None
+        return SentenceSplitter(chunk_size=int(spec["size"]), chunk_overlap=int(spec["overlap"]),
+                                tokenizer=tokenizer)
     if kind == "markdown":
         return MarkdownNodeParser()
     raise ValueError(f"Bilinmeyen chunking türü: {kind}")
@@ -30,7 +43,8 @@ def make_splitter(spec: dict):
 def chunk_key(spec: dict) -> str:
     kind = spec.get("type", "sentence")
     if kind == "sentence":
-        return f"sentence-{spec['size']}-{spec['overlap']}"
+        key = f"sentence-{spec['size']}-{spec['overlap']}"
+        return f"{key}-{spec['tokenizer'].replace('/', '_')}" if spec.get("tokenizer") else key
     return kind
 
 

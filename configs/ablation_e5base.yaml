@@ -1,0 +1,91 @@
+# H1 (hybrid füzyon) ve H3 (e5 önekleri) ablasyonu, multilingual-e5-base ile.
+# e5-large ile aynı aileden, daha küçük bir model: düzeltmelerin etkisinin yönünü göstermek için.
+name: ablation_e5base
+
+data:
+  docs_dir: data/processed/stage2_cleaned
+  qa_dir: data/benchmark
+
+eval:
+  k_values: [1, 3, 5, 10]
+  exact_mode: token
+  merge_duplicate_docs: true
+  bootstrap: 1000
+  seed: 42
+
+runtime:
+  device: null
+  batch_size: 32
+  cache_dir: .cache
+  dtype: float16
+
+systems:
+  # H3: önek yok (v1) vs "query: " / "passage: "
+  - name: "e5-base 512 önek yok"
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: intfloat/multilingual-e5-base, prefixes: none}
+  - name: "e5-base 512 önekli"
+    chunking: {type: sentence, size: 512, overlap: 128}
+    retriever: {type: dense, model: intfloat/multilingual-e5-base}
+  - name: "e5-base 1024 önekli"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: dense, model: intfloat/multilingual-e5-base}
+  - name: "BM25 tr 1024"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever: {type: bm25, tokenizer: tr_snowball}
+  # H1: füzyon modları
+  - name: "hybrid simple (v1)"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever:
+      type: hybrid
+      mode: simple
+      candidate_k: 10
+      components:
+        - {type: dense, model: intfloat/multilingual-e5-base}
+        - {type: bm25, tokenizer: tr_snowball}
+  - name: "hybrid rrf"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever:
+      type: hybrid
+      mode: rrf
+      candidate_k: 50
+      components:
+        - {type: dense, model: intfloat/multilingual-e5-base}
+        - {type: bm25, tokenizer: tr_snowball}
+  - name: "hybrid relative_score"
+    chunking: {type: sentence, size: 1024, overlap: 200}
+    retriever:
+      type: hybrid
+      mode: relative_score
+      candidate_k: 50
+      components:
+        - {type: dense, model: intfloat/multilingual-e5-base}
+        - {type: bm25, tokenizer: tr_snowball}
+
+  # H9: chunk boyutu modelin kendi tokenizer'ıyla ölçülür (500 + önek + özel token'lar < 512, kesilme yok)
+  - name: "e5-base 500tok önekli"
+    chunking: {type: sentence, size: 500, overlap: 100, tokenizer: intfloat/multilingual-e5-base}
+    retriever: {type: dense, model: intfloat/multilingual-e5-base}
+  - name: "BM25 tr 500tok"
+    chunking: {type: sentence, size: 500, overlap: 100, tokenizer: intfloat/multilingual-e5-base}
+    retriever: {type: bm25, tokenizer: tr_snowball}
+  - name: "hybrid relative_score 500tok"
+    chunking: {type: sentence, size: 500, overlap: 100, tokenizer: intfloat/multilingual-e5-base}
+    retriever:
+      type: hybrid
+      mode: relative_score
+      candidate_k: 50
+      components:
+        - {type: dense, model: intfloat/multilingual-e5-base}
+        - {type: bm25, tokenizer: tr_snowball}
+
+comparisons:
+  - ["e5-base 512 önekli", "e5-base 512 önek yok"]
+  - ["e5-base 500tok önekli", "e5-base 1024 önekli"]
+  - ["e5-base 500tok önekli", "e5-base 512 önekli"]
+  - ["hybrid relative_score 500tok", "BM25 tr 500tok"]
+  - ["hybrid rrf", "BM25 tr 1024"]
+  - ["hybrid rrf", "e5-base 1024 önekli"]
+  - ["hybrid relative_score", "BM25 tr 1024"]
+  - ["hybrid simple (v1)", "BM25 tr 1024"]
+comparison_k: 5

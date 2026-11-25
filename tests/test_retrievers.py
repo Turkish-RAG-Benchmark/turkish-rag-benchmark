@@ -37,3 +37,10 @@ def test_relative_score_fusion():
     out = fuse([[(0, 1.0), (1, 0.0)], [(1, 10.0), (0, 0.0)]], "relative_score", k=2)
     assert out[0][1] == pytest.approx(1.0) and out[1][1] == pytest.approx(1.0)
     assert [i for i, _ in out] == [0, 1]  # eşitlikte indeks sırası (deterministik)
+
+
+def test_chunk_key_includes_tokenizer():
+    from trrag.chunking import chunk_key
+
+    assert chunk_key({"type": "sentence", "size": 512, "overlap": 128}) == "sentence-512-128"
+    assert chunk_key({"type": "sentence", "size": 500, "overlap": 100, "tokenizer": "a/b"}) == "sentence-500-100-a_b"
